@@ -1,0 +1,6 @@
+c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\bin\x86\Debug\GTM.exe
+c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\bin\x86\Debug\GTM.pdb
+c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.exe
+c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.pdb
