@@ -11,8 +11,6 @@ namespace GTM.Model.Characters
     {
         #region Properties
 
-        public String Name { get; set; }
-
         public MapLocation Location { get; private set; }
 
         #endregion

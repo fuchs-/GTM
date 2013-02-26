@@ -7,10 +7,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTMContent\</RootDirectory>
-      <LoggerRootDirectory>c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\</LoggerRootDirectory>
-      <IntermediateDirectory>c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
