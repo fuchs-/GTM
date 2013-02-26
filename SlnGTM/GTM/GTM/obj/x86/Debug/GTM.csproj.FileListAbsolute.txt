@@ -8,3 +8,11 @@ C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\ResolveAssembly
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.exe
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.pdb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTM.exe
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTM.pdb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\BXEL.dll
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\BXEL.pdb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.exe
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.pdb

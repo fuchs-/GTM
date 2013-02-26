@@ -1,2 +1,3 @@
 c:\users\fuchs\documents\visual studio 2010\Projects\SlnGTM\GTM\GTMContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\ResolveAssemblyReference.cache

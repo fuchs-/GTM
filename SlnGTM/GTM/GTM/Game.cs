@@ -36,6 +36,8 @@ namespace GTM
             // TODO: Add your initialization logic here
 
             base.Initialize();
+
+            this.IsMouseVisible = true;
         }
 
         /// <summary>
