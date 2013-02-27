@@ -8,11 +8,13 @@ using BXEL.Graphics;
 
 namespace GTM.Model.Characters
 {
-    class Entity : Sprite
+    public class Entity : Sprite
     {
         #region Properties
 
         public MapLocation Location { get; private set; }
+
+        public Statistics Stats { get; private set; }
 
         #endregion
 
@@ -21,6 +23,7 @@ namespace GTM.Model.Characters
         public Entity(String name, Texture2D texture) : base(name, texture)
         {
             Location = new MapLocation();
+            Stats = new Statistics();
         }
 
         #endregion
