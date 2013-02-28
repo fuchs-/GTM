@@ -21,7 +21,7 @@ namespace GTM.Model.Characters
 
         #endregion
 
-        #region
+        #region Constructors
 
         public Statistics(int hp, int hpRegen, int mp, int mpRegen, int atkDmg, int atkSpd, int movSpd)
         {

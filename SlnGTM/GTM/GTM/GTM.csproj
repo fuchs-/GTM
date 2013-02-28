@@ -111,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Characters\Entity.cs" />
+    <Compile Include="Model\Characters\Hero.cs" />
+    <Compile Include="Model\Characters\Inventory.cs" />
+    <Compile Include="Model\Characters\Item.cs" />
     <Compile Include="Model\Characters\Statistics.cs" />
     <Compile Include="Model\MapLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

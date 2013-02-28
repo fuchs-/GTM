@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GTM.Model
 {
-    class MapLocation
+    public class MapLocation
     {
         #region Properties
 
