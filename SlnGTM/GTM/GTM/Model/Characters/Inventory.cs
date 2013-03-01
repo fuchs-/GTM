@@ -3,13 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Graphics;
+using BXEL.Graphics;
+
 namespace GTM.Model.Characters
 {
-    public class Inventory
+    public class Inventory : Sprite
     {
         #region Properties
 
-        private List<Item> Items { get; set; }
+        private Dictionary<int, Item> Items { get; set; }
+
+        #endregion
+
+        #region Constructors
+
+        public Inventory(Texture2D texture)
+            : base("Inventory", texture)
+        {
+            Items.Add(1, null);
+            Items.Add(2, null);
+            Items.Add(3, null);
+            Items.Add(4, null);
+            Items.Add(5, null);
+            Items.Add(6, null);
+        }
 
         #endregion
     }
