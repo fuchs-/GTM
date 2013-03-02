@@ -115,6 +115,8 @@
     <Compile Include="Model\Characters\Inventory.cs" />
     <Compile Include="Model\Characters\Item.cs" />
     <Compile Include="Model\Characters\Statistics.cs" />
+    <Compile Include="Model\Tile.cs" />
+    <Compile Include="Model\Map.cs" />
     <Compile Include="Model\MapLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />

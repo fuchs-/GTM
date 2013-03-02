@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using GTM.Model;
+
 namespace GTM
 {
     /// <summary>
@@ -18,11 +20,13 @@ namespace GTM
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Map map;
 
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            map = new Map();
         }
 
         /// <summary>
@@ -49,7 +53,7 @@ namespace GTM
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            map.LoadContent(this.Content);
         }
 
         /// <summary>

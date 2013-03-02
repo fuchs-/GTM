@@ -51,6 +51,11 @@ namespace GTM.Model
             WalkY(1);
         }
 
+        public override string ToString()
+        {
+            return "(" + X + ";" + Y + ")";
+        }
+
         #endregion
     }
 }
