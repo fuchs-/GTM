@@ -21,6 +21,7 @@ namespace GTM.Model
         public Tile(Texture2D tileTexture, MapLocation location) : base("Tile " + location, tileTexture)
         {
             Location = location;
+
         }
 
         #endregion
