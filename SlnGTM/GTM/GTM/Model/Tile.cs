@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using BXEL.Graphics;
 
-namespace GTM.Model.Characters
+namespace GTM.Model
 {
     public class Tile : Sprite
     {
