@@ -25,6 +25,10 @@ namespace GTM
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
+            /*
+            graphics.IsFullScreen = true;
+            graphics.ApplyChanges();
+             */
             Content.RootDirectory = "Content";
             map = new Map();
         }

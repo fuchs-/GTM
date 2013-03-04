@@ -25,8 +25,8 @@ namespace GTM.Model
 
         public Map()
         {
-            X = 30;
-            Y = 15;
+            X = 16;
+            Y = 9;
             Tiles = new Tile[X, Y];
         }
 
