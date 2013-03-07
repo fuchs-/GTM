@@ -30,7 +30,10 @@ namespace GTM.Model
         #endregion
 
         //Holds all the entities currently on the map
-        private Entity[,] Entities { get; set; }
+        private List<Entity> Entities { get; set; }
+
+        //Holds all the effects currently on the map
+        //private List<Effect> Effects { get; set; }
 
         #endregion
 
@@ -46,7 +49,7 @@ namespace GTM.Model
             Tiles = new Tile[X, Y];
 
             //Setting entitie's matrix
-            Entities = new Entity[X, Y];
+            Entities = new List<Entity>();
         }
 
         #endregion
@@ -66,8 +69,8 @@ namespace GTM.Model
                 for (int y = 0; y < Y; y++) // For each line
                 {
                     location = new MapLocation(x, y);
-                    Tiles[x, y] = new Tile(TileTexture, location); //Load the tile
-                    Tiles[x, y].Position = getScreenPosition(location);             //Set the right position for it
+                    Tiles[x, y] = new Tile(TileTexture, location);      //Load the tile
+                    Tiles[x, y].Position = getScreenPosition(location); //Set the right position for it
                 }
             }
         }
@@ -83,15 +86,21 @@ namespace GTM.Model
             //Drawing entities
             foreach (Entity e in Entities)
             {
-                if(e != null) e.Draw(spriteBatch);
+                e.Draw(spriteBatch);
             }
         }
 
         #endregion
 
-        public Vector2 getScreenPosition(MapLocation location)
+        private void setEntityLocation(Entity e, MapLocation location)
         {
-            Vector2 ret = new Vector2();
+            e.Location = location;
+            e.Position = getScreenPosition(location);
+        }
+
+        private Vector2 getScreenPosition(MapLocation location)
+        {
+            Vector2 ret = Vector2.Zero;
 
             if (location.X < X && location.Y < Y)
             {
@@ -104,7 +113,34 @@ namespace GTM.Model
 
         public Entity getEntityAtLocation(MapLocation location)
         {
-            return Entities[location.X, location.Y];
+            Entity ret = null;
+
+            foreach (Entity e in Entities)
+            {
+                if (e.Location == location)
+                {
+                    ret = e;
+                    break;
+                }
+            }
+
+            return ret;
+        }
+
+        public Entity getEntityForName(String name)
+        {
+            Entity ret = null;
+
+            foreach (Entity e in Entities)
+            {
+                if (e.Name == name)
+                {
+                    ret = e;
+                    break;
+                }
+            }
+
+            return ret;
         }
 
         #endregion

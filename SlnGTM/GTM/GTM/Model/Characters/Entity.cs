@@ -12,7 +12,7 @@ namespace GTM.Model.Characters
     {
         #region Properties
 
-        public MapLocation Location { get; private set; }
+        public MapLocation Location { get; set; }
 
         public Statistics Stats { get; private set; }
 
