@@ -110,14 +110,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Characters\Entity.cs" />
-    <Compile Include="Model\Characters\Hero.cs" />
-    <Compile Include="Model\Characters\Inventory.cs" />
-    <Compile Include="Model\Characters\Item.cs" />
-    <Compile Include="Model\Characters\Statistics.cs" />
-    <Compile Include="Model\Tile.cs" />
-    <Compile Include="Model\Map.cs" />
-    <Compile Include="Model\MapLocation.cs" />
+    <Compile Include="Model\Characters\Entity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Hero.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Inventory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Item.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Player.cs" />
+    <Compile Include="Model\Characters\Statistics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Team.cs" />
+    <Compile Include="Model\Map.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\MapLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Tile.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game.cs" />
