@@ -42,7 +42,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="emptyTile.png">
+    <Compile Include="Images\emptyTile.png">
       <Name>emptyTile</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>

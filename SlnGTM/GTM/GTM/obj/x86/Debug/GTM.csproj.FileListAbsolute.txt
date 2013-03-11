@@ -16,4 +16,4 @@ C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\ResolveAssemblyRef
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.exe
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.pdb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\emptyTile.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb

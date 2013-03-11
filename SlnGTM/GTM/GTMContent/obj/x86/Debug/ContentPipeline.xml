@@ -2,13 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>emptyTile.png</Source>
-      <Name>emptyTile</Name>
+      <Source>Images\emptyTile.png</Source>
+      <Name>Images\emptyTile</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\emptyTile.xnb</Output>
-      <Time>2013-03-04T19:07:14.1170804-03:00</Time>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
+      <Time>2013-03-11T18:10:17.8360655-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

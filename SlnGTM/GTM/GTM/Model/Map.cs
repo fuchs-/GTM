@@ -61,7 +61,7 @@ namespace GTM.Model
         public void LoadContent(ContentManager contentManager)
         {
             MapLocation location;
-            TileTexture = contentManager.Load<Texture2D>("emptyTile");
+            TileTexture = contentManager.Load<Texture2D>("Images\\emptyTile");
             TileSize = Size.GetSize(TileTexture);
 
             for (int x = 0; x < X; x++)     // For each column
