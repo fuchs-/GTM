@@ -127,6 +127,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\Characters\Team.cs" />
+    <Compile Include="Model\GameFlow\FlowController.cs" />
     <Compile Include="Model\Map.cs">
       <SubType>Code</SubType>
     </Compile>

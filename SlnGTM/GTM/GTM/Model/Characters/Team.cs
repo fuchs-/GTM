@@ -29,12 +29,25 @@ namespace GTM.Model.Characters
 
         #region Methods
 
-        #region Hero management
+        #region Player management
 
         public void AddPlayer(Player player)
         {
             Players.Add(player);
             
+        }
+
+        //Used for organizing the turn queue (FlowController)
+        public Queue<Player> GetPlayerQueue()
+        {
+            Queue<Player> ret = new Queue<Player>();
+
+            foreach (Player p in Players)
+            {
+                ret.Enqueue(p);
+            }
+            
+            return ret;
         }
 
         #endregion
