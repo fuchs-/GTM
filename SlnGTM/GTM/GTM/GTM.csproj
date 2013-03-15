@@ -110,6 +110,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Characters\Damage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\DamageOverTime.cs" />
+    <Compile Include="Model\Characters\DamageType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Effect.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Model\Characters\Entity.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,12 +132,18 @@
     <Compile Include="Model\Characters\Item.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\Characters\KDStatistics.cs" />
-    <Compile Include="Model\Characters\Player.cs" />
+    <Compile Include="Model\Characters\KDStatistics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Characters\Player.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Model\Characters\Statistics.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\Characters\Team.cs" />
+    <Compile Include="Model\Characters\Team.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Model\GameFlow\FlowController.cs" />
     <Compile Include="Model\Map.cs">
       <SubType>Code</SubType>
