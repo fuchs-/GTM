@@ -15,6 +15,8 @@ namespace GTM.Model.Characters
 
         public TeamColor Color { get; private set; }
 
+        public KDStatistics KD { get; private set; }
+
         #endregion
 
         #region Constructors
@@ -23,6 +25,8 @@ namespace GTM.Model.Characters
         {
             Players = new List<Player>();
             Color = color;
+
+            KD = new KDStatistics();
         }
 
         #endregion

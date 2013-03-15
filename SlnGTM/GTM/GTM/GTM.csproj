@@ -122,6 +122,7 @@
     <Compile Include="Model\Characters\Item.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Characters\KDStatistics.cs" />
     <Compile Include="Model\Characters\Player.cs" />
     <Compile Include="Model\Characters\Statistics.cs">
       <SubType>Code</SubType>

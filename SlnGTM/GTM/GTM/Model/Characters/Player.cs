@@ -13,6 +13,8 @@ namespace GTM.Model.Characters
         
         public Team CurrentTeam { get; private set; }
 
+        public KDStatistics KD { get; private set; }
+
         #endregion
 
         #region Methods
