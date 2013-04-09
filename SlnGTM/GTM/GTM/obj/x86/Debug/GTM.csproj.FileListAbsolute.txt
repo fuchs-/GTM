@@ -21,3 +21,12 @@ C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.HeroSelectionS
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\HeroList.xml
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\HeroList.xml
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTM.exe
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTM.pdb
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\BXEL.dll
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\BXEL.pdb
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.HeroSelectionScreen.resources
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.write.1.tlog
