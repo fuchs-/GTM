@@ -17,6 +17,18 @@ namespace GTM.Model.Characters
 
         #endregion
 
+        #region Constructors
+
+        public Player(Hero hero, Team team)
+        {
+            CurrentHero = hero;
+            CurrentTeam = team;
+
+            KD = new KDStatistics();
+        }
+
+        #endregion
+
         #region Methods
 
         public void AddedToTeam(Team team)

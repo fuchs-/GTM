@@ -11,15 +11,23 @@ using System.Xml;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 
+using GTM.Model.Characters;
+
 namespace GTM
 {
     public partial class HeroSelectionScreen : Form
     {
         XmlDocument heroListFile;
 
+        public Team RedTeam { get; private set; }
+        public Team BlueTeam { get; private set; }
+
         public HeroSelectionScreen()
         {
             InitializeComponent();
+
+            RedTeam = new Team(TeamColor.Red);
+            BlueTeam = new Team(TeamColor.Blue);
         }
 
         private void HeroSelectionScreen_Load(object sender, EventArgs e)
@@ -51,7 +59,21 @@ namespace GTM
         private void CheckAllValuesSelected(object sender, EventArgs e)
         {
             if ((cmbB1.Text != String.Empty) && (cmbB2.Text != String.Empty) && (cmbB3.Text != String.Empty) && (cmbR1.Text != String.Empty) && (cmbR2.Text != String.Empty) && (cmbR3.Text != String.Empty))
+<<<<<<< HEAD
                 this.Close();
+=======
+            {
+                RedTeam.AddPlayer(new Player(Hero.LoadHero(cmbR1.Text), RedTeam));
+                RedTeam.AddPlayer(new Player(Hero.LoadHero(cmbR2.Text), RedTeam));
+                RedTeam.AddPlayer(new Player(Hero.LoadHero(cmbR3.Text), RedTeam));
+
+                BlueTeam.AddPlayer(new Player(Hero.LoadHero(cmbB1.Text), BlueTeam));
+                BlueTeam.AddPlayer(new Player(Hero.LoadHero(cmbB2.Text), BlueTeam));
+                BlueTeam.AddPlayer(new Player(Hero.LoadHero(cmbB3.Text), BlueTeam));
+
+                this.Close();
+            }
+>>>>>>> Continued the Hero Selection Screen
         }
     }
 }

@@ -21,13 +21,15 @@ namespace GTM.Model.Characters
 
         #region Constructors
 
-        public Team(TeamColor color)
+        public Team(TeamColor color, List<Player> players)
         {
-            Players = new List<Player>();
+            Players = players;
             Color = color;
 
             KD = new KDStatistics();
         }
+
+        public Team(TeamColor color) : this(color, new List<Player>()) { }
 
         #endregion
 
