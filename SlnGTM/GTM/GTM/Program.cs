@@ -10,9 +10,6 @@ namespace GTM
         /// </summary>
         static void Main(string[] args)
         {
-            HeroSelectionScreen heroSelectionScreen = new HeroSelectionScreen();
-            heroSelectionScreen.ShowDialog();
-
             using (Game game = new Game())
             {
                 game.Run();

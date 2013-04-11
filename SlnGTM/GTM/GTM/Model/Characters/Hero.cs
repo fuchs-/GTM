@@ -23,10 +23,5 @@ namespace GTM.Model.Characters
         }
 
         #endregion
-
-        public static Hero LoadHero(string heroName)
-        {
-            return null;
-        }
     }
 }

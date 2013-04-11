@@ -135,6 +135,7 @@
     <Compile Include="Model\Characters\Hero.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Characters\HeroLoader.cs" />
     <Compile Include="Model\Characters\Inventory.cs">
       <SubType>Code</SubType>
     </Compile>

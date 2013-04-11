@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblR1 = new System.Windows.Forms.Label();
+            this.lblR2 = new System.Windows.Forms.Label();
+            this.lblR3 = new System.Windows.Forms.Label();
+            this.lblB1 = new System.Windows.Forms.Label();
+            this.lblB2 = new System.Windows.Forms.Label();
+            this.lblB3 = new System.Windows.Forms.Label();
             this.cmbR1 = new System.Windows.Forms.ComboBox();
             this.cmbR2 = new System.Windows.Forms.ComboBox();
             this.cmbR3 = new System.Windows.Forms.ComboBox();
@@ -66,59 +66,59 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Blue Team";
             // 
-            // label3
+            // lblR1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Player R1";
+            this.lblR1.AutoSize = true;
+            this.lblR1.Location = new System.Drawing.Point(12, 53);
+            this.lblR1.Name = "lblR1";
+            this.lblR1.Size = new System.Drawing.Size(53, 13);
+            this.lblR1.TabIndex = 3;
+            this.lblR1.Text = "Player R1";
             // 
-            // label4
+            // lblR2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Player R2";
+            this.lblR2.AutoSize = true;
+            this.lblR2.Location = new System.Drawing.Point(12, 110);
+            this.lblR2.Name = "lblR2";
+            this.lblR2.Size = new System.Drawing.Size(53, 13);
+            this.lblR2.TabIndex = 4;
+            this.lblR2.Text = "Player R2";
             // 
-            // label5
+            // lblR3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Player R3";
+            this.lblR3.AutoSize = true;
+            this.lblR3.Location = new System.Drawing.Point(12, 170);
+            this.lblR3.Name = "lblR3";
+            this.lblR3.Size = new System.Drawing.Size(53, 13);
+            this.lblR3.TabIndex = 5;
+            this.lblR3.Text = "Player R3";
             // 
-            // label6
+            // lblB1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(565, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Player B1";
+            this.lblB1.AutoSize = true;
+            this.lblB1.Location = new System.Drawing.Point(565, 53);
+            this.lblB1.Name = "lblB1";
+            this.lblB1.Size = new System.Drawing.Size(52, 13);
+            this.lblB1.TabIndex = 6;
+            this.lblB1.Text = "Player B1";
             // 
-            // label7
+            // lblB2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(566, 110);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Player B2";
+            this.lblB2.AutoSize = true;
+            this.lblB2.Location = new System.Drawing.Point(566, 110);
+            this.lblB2.Name = "lblB2";
+            this.lblB2.Size = new System.Drawing.Size(52, 13);
+            this.lblB2.TabIndex = 7;
+            this.lblB2.Text = "Player B2";
             // 
-            // label8
+            // lblB3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(565, 170);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Player B3";
+            this.lblB3.AutoSize = true;
+            this.lblB3.Location = new System.Drawing.Point(565, 170);
+            this.lblB3.Name = "lblB3";
+            this.lblB3.Size = new System.Drawing.Size(52, 13);
+            this.lblB3.TabIndex = 8;
+            this.lblB3.Text = "Player B3";
             // 
             // cmbR1
             // 
@@ -190,12 +190,12 @@
             this.Controls.Add(this.cmbR3);
             this.Controls.Add(this.cmbR2);
             this.Controls.Add(this.cmbR1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblB3);
+            this.Controls.Add(this.lblB2);
+            this.Controls.Add(this.lblB1);
+            this.Controls.Add(this.lblR3);
+            this.Controls.Add(this.lblR2);
+            this.Controls.Add(this.lblR1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "HeroSelectionScreen";
@@ -210,12 +210,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblR1;
+        private System.Windows.Forms.Label lblR2;
+        private System.Windows.Forms.Label lblR3;
+        private System.Windows.Forms.Label lblB1;
+        private System.Windows.Forms.Label lblB2;
+        private System.Windows.Forms.Label lblB3;
         private System.Windows.Forms.ComboBox cmbR2;
         private System.Windows.Forms.ComboBox cmbR3;
         private System.Windows.Forms.ComboBox cmbB1;

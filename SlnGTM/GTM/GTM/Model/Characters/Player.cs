@@ -9,6 +9,8 @@ namespace GTM.Model.Characters
     {
         #region Properties
 
+        public string Name { get; private set; }
+
         public Hero CurrentHero { get; private set; }
         
         public Team CurrentTeam { get; private set; }
@@ -19,8 +21,9 @@ namespace GTM.Model.Characters
 
         #region Constructors
 
-        public Player(Hero hero, Team team)
+        public Player(string name, Hero hero, Team team)
         {
+            Name = name;
             CurrentHero = hero;
             CurrentTeam = team;
 
