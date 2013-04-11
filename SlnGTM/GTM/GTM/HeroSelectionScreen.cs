@@ -37,7 +37,7 @@ namespace GTM
 
             try
             {
-                heroListFile.Load("HeroList.xml");
+                heroListFile.Load(@"Content\HeroList.xml");
             }
             catch (XmlException ex)
             {

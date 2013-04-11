@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Xml;
+
 namespace GTM.Model.Characters
 {
     public class Statistics
@@ -22,6 +24,30 @@ namespace GTM.Model.Characters
         #endregion
 
         #region Constructors
+
+        public Statistics(XmlDocument file)
+        {
+            XmlNode node;
+
+            node = file.SelectSingleNode("Statistics/HP");
+            HP = Convert.ToInt32(node.InnerText);
+            node = file.SelectSingleNode("Statistics/HPRegen");
+            HPRegen = Convert.ToInt32(node.InnerText);
+
+            node = file.SelectSingleNode("Statistics/MP");
+            MP = Convert.ToInt32(node.InnerText);
+            node = file.SelectSingleNode("Statistics/MPRegen");
+            MPRegen = Convert.ToInt32(node.InnerText);
+
+            node = file.SelectSingleNode("Statistics/AD");
+            AttackDamage = Convert.ToInt32(node.InnerText);
+
+            node = file.SelectSingleNode("Statistics/AtkSpeed");
+            AttackSpeed = Convert.ToInt32(node.InnerText);
+
+            node = file.SelectSingleNode("Statistics/MovSpeed");
+            MovementSpeed = Convert.ToInt32(node.InnerText);
+        }
 
         public Statistics(int hp, int hpRegen, int mp, int mpRegen, int atkDmg, int atkSpd, int movSpd)
         {

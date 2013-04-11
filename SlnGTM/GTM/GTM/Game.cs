@@ -75,7 +75,6 @@ namespace GTM
 
             hss.Dispose();
 
-
             map.LoadContent(this.Content);
         }
 

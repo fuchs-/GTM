@@ -14,7 +14,7 @@ namespace GTM.Model.Characters
 
         public MapLocation Location { get; set; }
 
-        public Statistics Stats { get; private set; }
+        public Statistics Stats { get; protected set; }
 
         #endregion
 
