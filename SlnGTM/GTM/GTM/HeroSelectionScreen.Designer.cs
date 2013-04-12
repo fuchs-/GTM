@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 307);
+            this.ClientSize = new System.Drawing.Size(630, 233);
             this.Controls.Add(this.cmbB3);
             this.Controls.Add(this.cmbB2);
             this.Controls.Add(this.cmbB1);
@@ -198,6 +198,8 @@
             this.Controls.Add(this.lblR1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "HeroSelectionScreen";
             this.Text = "HeroSelectionScreen";
             this.Load += new System.EventHandler(this.HeroSelectionScreen_Load);

@@ -49,13 +49,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Heroes\Ichigo\char.jpg">
+      <Name>char</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="HeroList.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>HeroList</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Content>
-    <Content Include="Statistics.xml">
+    <Content Include="Heroes\Ichigo\Statistics.xml">
       <Name>Statistics</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>

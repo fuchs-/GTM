@@ -53,7 +53,7 @@ namespace GTM
                 cmbB1.Items.Add(node.InnerText);
                 cmbB2.Items.Add(node.InnerText);
                 cmbB3.Items.Add(node.InnerText);
-            }             
+            }
         }
 
         private void CheckAllValuesSelected(object sender, EventArgs e)
