@@ -58,6 +58,44 @@ namespace GTM.Model
 
         #region Flow Methods
 
+        public void Initialize(Team redTeam, Team blueTeam)
+        {
+            List<Hero> heroes;
+            List<Hero>.Enumerator enumerator;
+            Hero current = null;
+
+            heroes = redTeam.GetHeroes();
+
+            enumerator = heroes.GetEnumerator();
+            enumerator.MoveNext();
+
+            for (int i = 0; i < heroes.Count; i++)
+            {
+                current = enumerator.Current;
+
+                current.Location = new MapLocation(0, i);
+                Entities.Add(current);
+
+                enumerator.MoveNext();
+            }
+
+
+            heroes = blueTeam.GetHeroes();
+
+            enumerator = heroes.GetEnumerator();
+            enumerator.MoveNext();
+
+            for (int i = 0; i < heroes.Count; i++)
+            {
+                current = enumerator.Current;
+
+                current.Location = new MapLocation(1, i);
+                Entities.Add(current);
+
+                enumerator.MoveNext();
+            }
+        }
+
         public void LoadContent(ContentManager contentManager)
         {
             MapLocation location;
@@ -73,6 +111,10 @@ namespace GTM.Model
                     Tiles[x, y].Position = getScreenPosition(location); //Set the right position for it
                 }
             }
+        }
+
+        public void Update(GameTime gameTime)
+        { 
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)

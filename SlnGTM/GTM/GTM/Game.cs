@@ -59,6 +59,8 @@ namespace GTM
             base.Initialize();
 
             this.IsMouseVisible = true;
+
+            map.Initialize(RedTeam, BlueTeam);
         }
 
         protected override void LoadContent()

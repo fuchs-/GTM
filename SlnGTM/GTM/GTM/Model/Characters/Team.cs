@@ -43,6 +43,18 @@ namespace GTM.Model.Characters
             
         }
 
+        public List<Hero> GetHeroes()
+        {
+            List<Hero> heroes = new List<Hero>();
+
+            foreach (Player p in Players)
+            {
+                heroes.Add(p.CurrentHero);
+            }
+
+            return heroes;
+        }
+
         //Used for organizing the turn queue (FlowController)
         public Queue<Player> GetPlayerQueue()
         {
