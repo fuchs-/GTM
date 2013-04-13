@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
 namespace GTM.Model.Characters
@@ -33,7 +34,8 @@ namespace GTM.Model.Characters
             
             Hero ret = null;
 
-            //insert loading code here
+            Texture2D charTexture = ContentManager.Load<Texture2D>(@"Heroes\" + heroName + @"\char");
+            ret = new Hero(heroName, charTexture);
 
             return ret;
         }

@@ -59,12 +59,13 @@ namespace GTM
             base.Initialize();
 
             this.IsMouseVisible = true;
-            HeroLoader.Initialize(this.Content);
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            HeroLoader.Initialize(this.Content);
 
             //brings up the Hero Selection Screen
             HeroSelectionScreen hss = new HeroSelectionScreen();

@@ -29,6 +29,10 @@ C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.HeroSelecti
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\HeroList.xml
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Statistics.xml
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\HeroList.xml
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Statistics.xml
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\Statistics.xml
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.jpg
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.jpg

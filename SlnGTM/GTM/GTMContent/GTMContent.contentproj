@@ -53,6 +53,13 @@
       <Name>char</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Heroes\Byakuya\char.jpg">
+      <Name>char</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Content Include="HeroList.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
