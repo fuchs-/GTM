@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
-      <Time>2013-04-11T17:16:56.7461694-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
+      <Time>2013-04-15T00:53:34.5019058-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Ichigo\char.jpg</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb</Output>
-      <Time>2013-04-12T18:36:08.205878-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb</Output>
+      <Time>2013-04-15T00:53:34.5019058-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Byakuya\char.jpg</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb</Output>
-      <Time>2012-04-15T00:42:28-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb</Output>
+      <Time>2013-04-15T00:53:34.5009058-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -34,10 +34,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -66,7 +66,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-03-16T00:37:11.3080573-03:00</Value>
+        <Value>2012-04-01T23:42:04.399319-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
