@@ -4,6 +4,8 @@ Content\Heroes\Byakuya\char.xnb
 Content\Images\EnergyBarBox.xnb
 Content\Images\HPBar.xnb
 Content\Images\MPBar.xnb
+Content\Images\BlueBorder.xnb
+Content\Images\RedBorder.xnb
 Content\Heroes\Byakuya\Statistics.xml
 Content\HeroList.xml
 Content\Heroes\Ichigo\Statistics.xml
@@ -12,3 +14,5 @@ Content\Heroes\Byakuya\char.jpg
 Content\Images\EnergyBarBox.png
 Content\Images\HPBar_LemonGreen.png
 Content\Images\MPBar_BrightBlue.png
+Content\Images\BlueBorder.png
+Content\Images\RedBorder.png

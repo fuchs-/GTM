@@ -20,6 +20,8 @@ namespace GTM.Model.Characters
         private EnergyBar HPBar { get; set; }
         private EnergyBar MPBar { get; set; }
 
+        private Sprite Border { get; set; }
+
         #endregion
 
         #region Properties
@@ -64,11 +66,8 @@ namespace GTM.Model.Characters
 
         #region Flow Methods
 
-        public void LoadContent(ContentManager contentManager)
+        public void Initialize(Texture2D barBox, Texture2D hpBarTexture, Sprite border)
         {
-            Texture2D barBox = contentManager.Load<Texture2D>(@"Images\EnergyBarBox");
-            Texture2D hpBarTexture = contentManager.Load<Texture2D>(@"Images\HPBar");
-
             Vector2 barPosition = this.Position;
             Vector2 energyPosition;
 
@@ -77,10 +76,14 @@ namespace GTM.Model.Characters
             energyPosition = barPosition + new Vector2(1);
 
             HPBar = new EnergyBar(InitialStats.HP, barBox, hpBarTexture, barPosition, energyPosition);
+
+            Border = border;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if (Border != null) Border.Draw(spriteBatch);
+
             base.Draw(spriteBatch);
 
             HPBar.Draw(gameTime, spriteBatch);
@@ -93,9 +96,13 @@ namespace GTM.Model.Characters
             Position = position;
 
             Vector2 barPosition = position;
+            Vector2 borderPosition = position;
+
             barPosition.Y += 45;
+            borderPosition -= new Vector2(1);
 
             HPBar.Position = barPosition;
+            Border.Position = borderPosition;
         }
 
         #endregion

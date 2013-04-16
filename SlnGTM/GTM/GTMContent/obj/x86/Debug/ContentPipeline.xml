@@ -55,6 +55,24 @@
       <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\MPBar.xnb</Output>
       <Time>2013-04-15T18:10:24.9088941-03:00</Time>
     </Item>
+    <Item>
+      <Source>Images\BlueBorder.png</Source>
+      <Name>Images\BlueBorder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\BlueBorder.xnb</Output>
+      <Time>2013-04-16T18:02:05.4334213-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\RedBorder.png</Source>
+      <Name>Images\RedBorder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\RedBorder.xnb</Output>
+      <Time>2013-04-16T18:01:44.3512155-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

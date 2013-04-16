@@ -70,7 +70,7 @@ namespace GTM
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            HeroLoader.Initialize(this.Content);
+            EntityLoader.Initialize(this.Content);
 
             //brings up the Hero Selection Screen
             HeroSelectionScreen hss = new HeroSelectionScreen();
