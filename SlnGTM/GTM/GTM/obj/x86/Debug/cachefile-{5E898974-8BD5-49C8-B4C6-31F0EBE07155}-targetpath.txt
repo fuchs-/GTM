@@ -1,7 +1,13 @@
 Content\Images\emptyTile.xnb
 Content\Heroes\Ichigo\char.xnb
 Content\Heroes\Byakuya\char.xnb
+Content\Images\EnergyBarBox.xnb
+Content\Images\HPBar.xnb
+Content\Images\MPBar.xnb
 Content\HeroList.xml
 Content\Heroes\Ichigo\Statistics.xml
 Content\Heroes\Ichigo\char.jpg
 Content\Heroes\Byakuya\char.jpg
+Content\Images\EnergyBarBox.png
+Content\Images\HPBar_LemonGreen.png
+Content\Images\MPBar_BrightBlue.png

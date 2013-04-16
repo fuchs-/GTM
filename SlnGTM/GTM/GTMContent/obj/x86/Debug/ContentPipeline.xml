@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
-      <Time>2013-04-15T00:53:34.5019058-03:00</Time>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
+      <Time>2013-04-15T17:53:41.091479-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Ichigo\char.jpg</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb</Output>
-      <Time>2013-04-15T00:53:34.5019058-03:00</Time>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb</Output>
+      <Time>2013-04-15T17:53:41.090479-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Byakuya\char.jpg</Source>
@@ -25,8 +25,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb</Output>
-      <Time>2013-04-15T00:53:34.5009058-03:00</Time>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb</Output>
+      <Time>2013-04-15T17:53:41.0894789-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\EnergyBarBox.png</Source>
+      <Name>Images\EnergyBarBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\EnergyBarBox.xnb</Output>
+      <Time>2013-04-15T18:06:40.6080648-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\HPBar_LemonGreen.png</Source>
+      <Name>Images\HPBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HPBar.xnb</Output>
+      <Time>2013-04-15T18:09:37.8452022-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\MPBar_BrightBlue.png</Source>
+      <Name>Images\MPBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\MPBar.xnb</Output>
+      <Time>2013-04-15T18:10:24.9088941-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -34,10 +61,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -66,7 +93,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-04-01T23:42:04.399319-03:00</Value>
+        <Value>2012-03-16T00:37:11.3080573-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

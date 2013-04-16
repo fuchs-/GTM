@@ -73,7 +73,7 @@ namespace GTM.Model
             {
                 current = enumerator.Current;
 
-                current.Location = new MapLocation(0, i);
+                setEntityLocation(current, new MapLocation(0, i));
                 Entities.Add(current);
 
                 enumerator.MoveNext();
@@ -89,7 +89,7 @@ namespace GTM.Model
             {
                 current = enumerator.Current;
 
-                current.Location = new MapLocation(1, i);
+                setEntityLocation(current, new MapLocation(2, i));
                 Entities.Add(current);
 
                 enumerator.MoveNext();
@@ -128,7 +128,7 @@ namespace GTM.Model
             //Drawing entities
             foreach (Entity e in Entities)
             {
-                e.Draw(spriteBatch);
+                e.Draw(gameTime, spriteBatch);
             }
         }
 
@@ -137,7 +137,7 @@ namespace GTM.Model
         private void setEntityLocation(Entity e, MapLocation location)
         {
             e.Location = location;
-            e.Position = getScreenPosition(location);
+            e.SetNewPosition(getScreenPosition(location));
         }
 
         private Vector2 getScreenPosition(MapLocation location)
