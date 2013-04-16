@@ -25,9 +25,12 @@ namespace GTM.Model.GameFlow
             RedTeam = redTeam;
             BlueTeam = blueTeam;
 
+            Turns = new Queue<Player>();
+
             OrganizeTurnQueue();
 
-            CurrentTurn = Turns.Dequeue();
+            if(Turns.Count > 0)
+                CurrentTurn = Turns.Dequeue();
         }
 
         #endregion

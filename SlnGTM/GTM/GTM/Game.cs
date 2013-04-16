@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 using GTM.Model;
 using GTM.Model.Characters;
+using GTM.Model.GameFlow;
 
 namespace GTM
 {
@@ -25,6 +26,7 @@ namespace GTM
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Map map;
+        FlowController flowController;
 
         #endregion
 
@@ -61,6 +63,7 @@ namespace GTM
             this.IsMouseVisible = true;
 
             map.Initialize(RedTeam, BlueTeam);
+            flowController = new FlowController(RedTeam, BlueTeam);
         }
 
         protected override void LoadContent()
@@ -77,6 +80,8 @@ namespace GTM
             BlueTeam = hss.BlueTeam;
 
             hss.Dispose();
+
+            if (RedTeam.GetHeroes().Count < 3 || BlueTeam.GetHeroes().Count < 3) this.Exit();
 
             map.LoadContent(this.Content);
         }

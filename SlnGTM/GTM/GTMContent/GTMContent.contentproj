@@ -61,6 +61,12 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Content Include="Heroes\Byakuya\Statistics.xml">
+      <Name>Statistics</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="HeroList.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>HeroList</Name>
