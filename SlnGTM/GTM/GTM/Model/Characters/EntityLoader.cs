@@ -16,6 +16,8 @@ namespace GTM.Model.Characters
     {
         #region Properties
 
+        private static int CurrentID { get; set; }
+
         private static ContentManager ContentManager { get; set; }
 
         public static bool IsReady { get; private set; }
@@ -38,6 +40,8 @@ namespace GTM.Model.Characters
         public static void Initialize(ContentManager contentManager)
         {
             if (contentManager == null) return;
+
+            CurrentID = 0;
 
             ContentManager = contentManager;
 
@@ -65,7 +69,7 @@ namespace GTM.Model.Characters
 
             statsFile.Load(@"Content\Heroes\" + heroName + @"\Statistics.xml");
 
-            ret = new Hero(heroName, charTexture, new Statistics(statsFile));
+            ret = new Hero(CurrentID++, heroName, charTexture, new Statistics(statsFile));
 
             ret.Initialize(EnergyBarBox, HPBar, GetBorderSprite(color));
 

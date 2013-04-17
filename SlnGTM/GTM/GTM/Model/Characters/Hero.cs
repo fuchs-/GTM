@@ -19,12 +19,12 @@ namespace GTM.Model.Characters
 
         #region Constructors
 
-        public Hero(string name, Texture2D texture, Statistics baseStats) : base(name, texture, baseStats)
+        public Hero(int ID, string name, Texture2D texture, Statistics baseStats) : base(ID, name, texture, baseStats)
         {
             LevelUpStats = new Statistics();
         }
 
-        public Hero(string name, Texture2D texture) : base(name, texture)
+        public Hero(int ID, string name, Texture2D texture) : base(ID, name, texture)
         {
             LevelUpStats = new Statistics();
         }

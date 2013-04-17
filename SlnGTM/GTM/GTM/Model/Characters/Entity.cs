@@ -17,11 +17,6 @@ namespace GTM.Model.Characters
 
         private MapLocation location;
 
-        private EnergyBar HPBar { get; set; }
-        private EnergyBar MPBar { get; set; }
-
-        private Sprite Border { get; set; }
-
         #endregion
 
         #region Properties
@@ -34,7 +29,7 @@ namespace GTM.Model.Characters
             {
                 location = value;
 
-                this.Position = new Vector2(location.X * 50, location.Y * 50);
+                SetNewPosition(new Vector2(location.X * 50, location.Y * 50));
 
             }
         }
@@ -43,19 +38,31 @@ namespace GTM.Model.Characters
 
         public Statistics Stats { get; protected set; }
 
+        private EnergyBar HPBar { get; set; }
+        private EnergyBar MPBar { get; set; }
+
+        private Sprite Border { get; set; }
+
+        //this is a unique identifier for each entity
+        public int id { get; private set; }
+
         #endregion
 
         #region Constructors
 
-        public Entity(String name, Texture2D texture, Statistics stats) : base(name, texture, Vector2.Zero, new Size(50, 50))
+        public Entity(int ID, String name, Texture2D texture, Statistics stats) : base(name, texture, Vector2.Zero, new Size(50, 50))
         {
+            this.id = ID;
+
             Location = new MapLocation();
             InitialStats = stats;
             Stats = stats;
         }
 
-        public Entity(String name, Texture2D texture) : base(name, texture, Vector2.Zero, new Size(50, 50))
+        public Entity(int ID, String name, Texture2D texture) : base(name, texture, Vector2.Zero, new Size(50, 50))
         {
+            this.id = ID;
+
             Location = new MapLocation();
             InitialStats = new Statistics();
         }
@@ -101,8 +108,8 @@ namespace GTM.Model.Characters
             barPosition.Y += 45;
             borderPosition -= new Vector2(1);
 
-            HPBar.Position = barPosition;
-            Border.Position = borderPosition;
+            if(HPBar != null) HPBar.Position = barPosition;
+            if(Border != null) Border.Position = borderPosition;
         }
 
         #endregion

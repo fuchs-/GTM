@@ -17,6 +17,8 @@ namespace GTM.Model.Characters
 
         public KDStatistics KD { get; private set; }
 
+        private List<int> EntitiesUnderControl { get; set; }
+
         #endregion
 
         #region Constructors
@@ -28,6 +30,9 @@ namespace GTM.Model.Characters
             CurrentTeam = team;
 
             KD = new KDStatistics();
+            EntitiesUnderControl = new List<int>();
+
+            GiveControl(CurrentHero);
         }
 
         #endregion
@@ -37,6 +42,21 @@ namespace GTM.Model.Characters
         public void AddedToTeam(Team team)
         {
             CurrentTeam = team;
+        }
+
+        public void GiveControl(Entity e)
+        {
+            EntitiesUnderControl.Add(e.id);
+        }
+
+        public bool HasControl(Entity e)
+        {
+            return EntitiesUnderControl.Contains(e.id);
+        }
+
+        public void RemoveControl(Entity e)
+        {
+            EntitiesUnderControl.Remove(e.id);
         }
 
         #endregion
