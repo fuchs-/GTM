@@ -9,9 +9,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-using GTM.Model;
-using GTM.Model.Characters;
-using GTM.Model.GameFlow;
+using GTMEngine.Model;
+using GTMEngine.Model.Characters;
+using GTMEngine.Model.GameFlow;
+
 
 namespace GTM
 {
@@ -40,10 +41,6 @@ namespace GTM
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
-            /*
-            graphics.IsFullScreen = true;
-            graphics.ApplyChanges();
-             */
 
             Content.RootDirectory = "Content";
             map = new Map();
@@ -71,9 +68,11 @@ namespace GTM
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             EntityLoader.Initialize(this.Content);
+            Hero.LoadContent(this.Content);
 
             //brings up the Hero Selection Screen
             HeroSelectionScreen hss = new HeroSelectionScreen();
+            hss.LoadHeroNames(this.Content);
             hss.ShowDialog();
 
             RedTeam = hss.RedTeam;

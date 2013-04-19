@@ -6,18 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Xml;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 
-using GTM.Model.Characters;
+using GTMEngine.Model.Characters;
 
 namespace GTM
 {
     public partial class HeroSelectionScreen : Form
     {
-        XmlDocument heroListFile;
 
         public Team RedTeam { get; private set; }
         public Team BlueTeam { get; private set; }
@@ -30,29 +28,19 @@ namespace GTM
             BlueTeam = new Team(TeamColor.Blue);
         }
 
-        private void HeroSelectionScreen_Load(object sender, EventArgs e)
+        public void LoadHeroNames(ContentManager contentManager)
         {
+            List<String> heroes = contentManager.Load<List<String>>(@"Heroes\HeroList");
 
-            heroListFile = new XmlDocument();
-
-            try
+            foreach (String s in heroes)
             {
-                heroListFile.Load(@"Content\HeroList.xml");
-            }
-            catch (XmlException ex)
-            {
-                MessageBox.Show("Xml Exception: " + ex.Message);
-            }
+                cmbR1.Items.Add(s);
+                cmbR2.Items.Add(s);
+                cmbR3.Items.Add(s);
 
-            foreach (XmlNode node in heroListFile.SelectNodes("Heroes/Hero"))
-            {
-                cmbR1.Items.Add(node.InnerText);
-                cmbR2.Items.Add(node.InnerText);
-                cmbR3.Items.Add(node.InnerText);
-
-                cmbB1.Items.Add(node.InnerText);
-                cmbB2.Items.Add(node.InnerText);
-                cmbB3.Items.Add(node.InnerText);
+                cmbB1.Items.Add(s);
+                cmbB2.Items.Add(s);
+                cmbB3.Items.Add(s);
             }
         }
 
@@ -69,6 +57,45 @@ namespace GTM
                 BlueTeam.AddPlayer(new Player(lblB3.Text, EntityLoader.LoadHero(cmbB3.Text, TeamColor.Blue), BlueTeam));
 
                 this.Close();
+            }
+        }
+
+        private void btnIchigo_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType().Name == "ComboBox")
+                {
+                    ComboBox cmb = (ComboBox)c;
+                    cmb.SelectedIndex = 0;
+                }
+            }
+        }
+
+        private void btnByakuya_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType().Name == "ComboBox")
+                {
+                    ComboBox cmb = (ComboBox)c;
+                    cmb.SelectedIndex = 1;
+                }
+            }
+        }
+
+        private void btnHalf_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType().Name == "ComboBox")
+                {
+                    ComboBox cmb = (ComboBox)c;
+                    if (cmb.Name.StartsWith("cmbR"))
+                        cmb.SelectedIndex = 0;
+                    else
+                        cmb.SelectedIndex = 1;
+                }
             }
         }
     }

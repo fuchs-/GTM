@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRedTeam = new System.Windows.Forms.Label();
+            this.lblBlueTeam = new System.Windows.Forms.Label();
             this.lblR1 = new System.Windows.Forms.Label();
             this.lblR2 = new System.Windows.Forms.Label();
             this.lblR3 = new System.Windows.Forms.Label();
@@ -42,29 +42,32 @@
             this.cmbB1 = new System.Windows.Forms.ComboBox();
             this.cmbB2 = new System.Windows.Forms.ComboBox();
             this.cmbB3 = new System.Windows.Forms.ComboBox();
+            this.btnIchigo = new System.Windows.Forms.Button();
+            this.btnByakuya = new System.Windows.Forms.Button();
+            this.btnHalf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblRedTeam
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(46, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Red Team";
+            this.lblRedTeam.AutoSize = true;
+            this.lblRedTeam.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRedTeam.ForeColor = System.Drawing.Color.Red;
+            this.lblRedTeam.Location = new System.Drawing.Point(46, 9);
+            this.lblRedTeam.Name = "lblRedTeam";
+            this.lblRedTeam.Size = new System.Drawing.Size(117, 23);
+            this.lblRedTeam.TabIndex = 1;
+            this.lblRedTeam.Text = "Red Team";
             // 
-            // label2
+            // lblBlueTeam
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(494, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Blue Team";
+            this.lblBlueTeam.AutoSize = true;
+            this.lblBlueTeam.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlueTeam.ForeColor = System.Drawing.Color.Blue;
+            this.lblBlueTeam.Location = new System.Drawing.Point(494, 9);
+            this.lblBlueTeam.Name = "lblBlueTeam";
+            this.lblBlueTeam.Size = new System.Drawing.Size(124, 23);
+            this.lblBlueTeam.TabIndex = 2;
+            this.lblBlueTeam.Text = "Blue Team";
             // 
             // lblR1
             // 
@@ -179,11 +182,44 @@
             this.cmbB3.TabIndex = 14;
             this.cmbB3.SelectedIndexChanged += new System.EventHandler(this.CheckAllValuesSelected);
             // 
+            // btnIchigo
+            // 
+            this.btnIchigo.Location = new System.Drawing.Point(12, 226);
+            this.btnIchigo.Name = "btnIchigo";
+            this.btnIchigo.Size = new System.Drawing.Size(186, 23);
+            this.btnIchigo.TabIndex = 15;
+            this.btnIchigo.Text = "All Ichigo";
+            this.btnIchigo.UseVisualStyleBackColor = true;
+            this.btnIchigo.Click += new System.EventHandler(this.btnIchigo_Click);
+            // 
+            // btnByakuya
+            // 
+            this.btnByakuya.Location = new System.Drawing.Point(204, 226);
+            this.btnByakuya.Name = "btnByakuya";
+            this.btnByakuya.Size = new System.Drawing.Size(221, 23);
+            this.btnByakuya.TabIndex = 16;
+            this.btnByakuya.Text = "All Byakuya";
+            this.btnByakuya.UseVisualStyleBackColor = true;
+            this.btnByakuya.Click += new System.EventHandler(this.btnByakuya_Click);
+            // 
+            // btnHalf
+            // 
+            this.btnHalf.Location = new System.Drawing.Point(431, 226);
+            this.btnHalf.Name = "btnHalf";
+            this.btnHalf.Size = new System.Drawing.Size(186, 23);
+            this.btnHalf.TabIndex = 17;
+            this.btnHalf.Text = "Half";
+            this.btnHalf.UseVisualStyleBackColor = true;
+            this.btnHalf.Click += new System.EventHandler(this.btnHalf_Click);
+            // 
             // HeroSelectionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 233);
+            this.ClientSize = new System.Drawing.Size(630, 261);
+            this.Controls.Add(this.btnHalf);
+            this.Controls.Add(this.btnByakuya);
+            this.Controls.Add(this.btnIchigo);
             this.Controls.Add(this.cmbB3);
             this.Controls.Add(this.cmbB2);
             this.Controls.Add(this.cmbB1);
@@ -196,13 +232,12 @@
             this.Controls.Add(this.lblR3);
             this.Controls.Add(this.lblR2);
             this.Controls.Add(this.lblR1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblBlueTeam);
+            this.Controls.Add(this.lblRedTeam);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "HeroSelectionScreen";
-            this.Text = "HeroSelectionScreen";
-            this.Load += new System.EventHandler(this.HeroSelectionScreen_Load);
+            this.Text = "Hero Selection";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,8 +245,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRedTeam;
+        private System.Windows.Forms.Label lblBlueTeam;
         private System.Windows.Forms.Label lblR1;
         private System.Windows.Forms.Label lblR2;
         private System.Windows.Forms.Label lblR3;
@@ -224,5 +259,8 @@
         private System.Windows.Forms.ComboBox cmbB2;
         private System.Windows.Forms.ComboBox cmbB3;
         private System.Windows.Forms.ComboBox cmbR1;
+        private System.Windows.Forms.Button btnIchigo;
+        private System.Windows.Forms.Button btnByakuya;
+        private System.Windows.Forms.Button btnHalf;
     }
 }

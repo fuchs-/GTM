@@ -60,9 +60,8 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BXEL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\BXEL.dll</HintPath>
+    <Reference Include="BXEL">
+      <HintPath>..\..\GTMEngine\BXEL.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <Private>False</Private>
@@ -120,51 +119,6 @@
     <Compile Include="HeroSelectionScreen.Designer.cs">
       <DependentUpon>HeroSelectionScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Characters\Damage.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\DamageOverTime.cs" />
-    <Compile Include="Model\Characters\DamageType.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Effect.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Entity.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\EntityLoader.cs" />
-    <Compile Include="Model\Characters\Hero.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Inventory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Item.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\KDStatistics.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Player.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Statistics.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Characters\Team.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\GameFlow\FlowController.cs" />
-    <Compile Include="Model\Map.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\MapLocation.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Tile.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game.cs" />
@@ -174,6 +128,10 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GTMEngine\GTMEngine.csproj">
+      <Project>{9A2CFC95-92E8-473D-994B-8810A617A8E2}</Project>
+      <Name>GTMEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GTMContent\GTMContent.contentproj">
       <Name>GTMContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>

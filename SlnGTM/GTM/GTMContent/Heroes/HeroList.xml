@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="System.Collections.Generic.List[System.String]">
+    <Item>Ichigo</Item>
+    <Item>Byakuya</Item>
+  </Asset>
+</XnaContent>
