@@ -36,7 +36,45 @@ namespace GTMEngine.Model.Characters
             MovementSpeed = movSpd;
         }
 
+        public Statistics(Statistics s) : this(s.HP, s.HPRegen, s.MP, s.MPRegen, s.AttackDamage, s.AttackSpeed, s.MovementSpeed) { }
+
         public Statistics() : this(0, 0, 0, 0, 0, 0, 0) { }
+
+        #endregion
+
+        #region Operators
+
+        public static Statistics operator +(Statistics s1, Statistics s2)
+        {
+            Statistics ret = new Statistics(s1);
+
+            ret.HP += s2.HP;
+            ret.HPRegen += s2.HPRegen;
+            ret.MP += s2.MP;
+            ret.MPRegen += s2.MPRegen;
+
+            ret.AttackDamage += s2.AttackDamage;
+            ret.AttackSpeed += s2.AttackSpeed;
+            ret.MovementSpeed += s2.MovementSpeed;
+
+            return ret;
+        }
+
+        public static Statistics operator -(Statistics s1, Statistics s2)
+        {
+            Statistics ret = new Statistics(s1);
+
+            ret.HP -= s2.HP;
+            ret.HPRegen -= s2.HPRegen;
+            ret.MP -= s2.MP;
+            ret.MPRegen -= s2.MPRegen;
+
+            ret.AttackDamage -= s2.AttackDamage;
+            ret.AttackSpeed -= s2.AttackSpeed;
+            ret.MovementSpeed -= s2.MovementSpeed;
+
+            return ret;
+        }
 
         #endregion
     }

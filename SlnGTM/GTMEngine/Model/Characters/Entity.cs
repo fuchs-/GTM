@@ -34,7 +34,7 @@ namespace GTMEngine.Model.Characters
             }
         }
 
-        public Statistics InitialStats { get; protected set; }
+        protected Statistics InitialStats { get; set; }
 
         public Statistics Stats { get; protected set; }
 

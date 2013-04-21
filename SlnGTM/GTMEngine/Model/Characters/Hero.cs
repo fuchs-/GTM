@@ -29,11 +29,9 @@ namespace GTMEngine.Model.Characters
         public Hero(int ID, string name, Texture2D texture, Statistics baseStats) : base(ID, name, texture, baseStats)
         {
             LevelUpStats = new Statistics();
-        }
-
-        public Hero(int ID, string name, Texture2D texture) : base(ID, name, texture)
-        {
-            LevelUpStats = new Statistics();
+            Level = 1;
+            Experience = 0;
+            ExperienceToNextLevel = Hero.LevelUpExperiences[1];
         }
 
         #endregion
@@ -48,6 +46,27 @@ namespace GTMEngine.Model.Characters
         }
 
         #endregion
+
+        public void GiveExperience(int exp)
+        {
+            Experience += exp;
+
+            if (Experience >= ExperienceToNextLevel)
+            {
+                Experience = Experience - ExperienceToNextLevel;
+                this.LevelUp();
+            }
+        }
+
+        private void LevelUp()
+        {
+            Level++;
+
+            Stats += LevelUpStats;
+            ExperienceToNextLevel = Hero.LevelUpExperiences[Level];
+
+            //probably some ability level up logic goes here
+        }
 
         #endregion
     }
