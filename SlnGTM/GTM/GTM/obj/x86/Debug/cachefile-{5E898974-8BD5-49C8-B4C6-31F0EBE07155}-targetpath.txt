@@ -6,6 +6,7 @@ Content\Images\HPBar.xnb
 Content\Images\MPBar.xnb
 Content\Images\BlueBorder.xnb
 Content\Images\RedBorder.xnb
+Content\Images\HUDGrid.xnb
 Content\Heroes\HeroList.xnb
 Content\Heroes\LevelUpExperiences.xnb
 Content\Heroes\Ichigo\Statistics.xnb

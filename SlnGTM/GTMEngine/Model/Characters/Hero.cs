@@ -22,6 +22,8 @@ namespace GTMEngine.Model.Characters
         public int Experience { get; private set; }
         public int ExperienceToNextLevel { get; private set; }
 
+        public Texture2D CharImage { get; private set; }
+
         #endregion
 
         #region Constructors
@@ -32,6 +34,8 @@ namespace GTMEngine.Model.Characters
             Level = 1;
             Experience = 0;
             ExperienceToNextLevel = Hero.LevelUpExperiences[1];
+
+            CharImage = texture; //this is provisory, there will be a different texture for the char image
         }
 
         #endregion

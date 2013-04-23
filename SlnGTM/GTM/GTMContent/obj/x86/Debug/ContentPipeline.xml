@@ -74,6 +74,15 @@
       <Time>2013-04-16T18:01:44.3512155-03:00</Time>
     </Item>
     <Item>
+      <Source>Images\HUDGrid.png</Source>
+      <Name>Images\HUDGrid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUDGrid.xnb</Output>
+      <Time>2013-04-22T01:12:37.7754083-03:00</Time>
+    </Item>
+    <Item>
       <Source>Heroes\HeroList.xml</Source>
       <Name>Heroes\HeroList</Name>
       <Importer>XmlImporter</Importer>
@@ -147,7 +156,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\GTMEngine.dll</Key>
-        <Value>2013-04-21T01:11:12.4609127-03:00</Value>
+        <Value>2013-04-23T02:12:10.6011128-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>

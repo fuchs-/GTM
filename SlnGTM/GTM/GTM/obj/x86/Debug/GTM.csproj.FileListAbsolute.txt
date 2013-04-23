@@ -47,3 +47,4 @@ C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\BXEL.pdb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.exe
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.pdb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\Statistics.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUDGrid.xnb

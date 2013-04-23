@@ -13,6 +13,8 @@ using GTMEngine.Model;
 using GTMEngine.Model.Characters;
 using GTMEngine.Model.GameFlow;
 
+using GTMEngine.UI;
+
 
 namespace GTM
 {
@@ -28,6 +30,7 @@ namespace GTM
         SpriteBatch spriteBatch;
         Map map;
         FlowController flowController;
+        HUD hud;
 
         #endregion
 
@@ -42,8 +45,11 @@ namespace GTM
         {
             graphics = new GraphicsDeviceManager(this);
 
+            graphics.PreferredBackBufferHeight = 620;
+
             Content.RootDirectory = "Content";
             map = new Map();
+            hud = new HUD();
         }
 
         #region Methods
@@ -61,6 +67,8 @@ namespace GTM
 
             map.Initialize(RedTeam, BlueTeam);
             flowController = new FlowController(RedTeam, BlueTeam);
+
+            hud.ChangeCurrentChar(flowController.CurrentTurn.CurrentHero.CharImage);
         }
 
         protected override void LoadContent()
@@ -83,6 +91,7 @@ namespace GTM
             if (RedTeam.GetHeroes().Count < 3 || BlueTeam.GetHeroes().Count < 3) this.Exit();
 
             map.LoadContent(this.Content);
+            hud.LoadContent(this.Content);
         }
 
         protected override void UnloadContent()
@@ -96,7 +105,7 @@ namespace GTM
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            // TODO: Add your update logic here
+            //This block will get complicated soon
 
             base.Update(gameTime);
         }
@@ -109,6 +118,7 @@ namespace GTM
             spriteBatch.Begin();
 
             map.Draw(spriteBatch, gameTime);
+            hud.Draw(spriteBatch);
 
             spriteBatch.End();
 
