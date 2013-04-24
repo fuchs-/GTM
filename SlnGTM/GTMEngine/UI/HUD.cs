@@ -14,10 +14,16 @@ namespace GTMEngine.UI
 {
     public class HUD
     {
+        #region Attributes
+
+        public static Vector2 HUDPosition = new Vector2(0, 450);
+
+        #endregion
+
         #region Properties
 
-        private UIPanel Grid { get; set; }
-        private Sprite CurrentCharPicture { get; set; }
+        private Sprite Grid { get; set; }
+        private HUDDisplay CurrentHUDDisplay { get; set; }
 
         #endregion
 
@@ -27,23 +33,20 @@ namespace GTMEngine.UI
 
         public void LoadContent(ContentManager contentManager)
         {
-            Grid = new UIPanel("Grid", contentManager.Load<Texture2D>(@"Images\HUDGrid"), new Vector2(0, 450));
+            Grid = new Sprite("HUDGrid", contentManager.Load<Texture2D>(@"Images\HUDGrid"), HUDPosition);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             Grid.Draw(spriteBatch);
+            if (CurrentHUDDisplay != null) CurrentHUDDisplay.Draw(spriteBatch);
         }
 
         #endregion
 
-        public void ChangeCurrentChar(Texture2D newCharTexture)
-        { 
-            Sprite newChar = new Sprite("CurrentChar", newCharTexture, new Rectangle(10, 10, 150, 150));
-            Grid.RemoveObject(CurrentCharPicture);
-
-            CurrentCharPicture = newChar;
-            Grid.AddObject(CurrentCharPicture);
+        public void ChangeHUDDisplay(HUDDisplay newHUDDisplay)
+        {
+            CurrentHUDDisplay = newHUDDisplay;
         }
 
         #endregion

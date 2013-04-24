@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using BXEL.Graphics;
+
 using GTMEngine.Model;
 using GTMEngine.Model.Characters;
 using GTMEngine.Model.GameFlow;
@@ -68,7 +70,7 @@ namespace GTM
             map.Initialize(RedTeam, BlueTeam);
             flowController = new FlowController(RedTeam, BlueTeam);
 
-            hud.ChangeCurrentChar(flowController.CurrentTurn.CurrentHero.CharImage);
+            hud.ChangeHUDDisplay(flowController.CurrentTurn.CurrentHero.MyHUDDisplay);
         }
 
         protected override void LoadContent()

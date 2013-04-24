@@ -8,6 +8,8 @@ using Microsoft.Xna.Framework.Content;
 
 using BXEL.Graphics;
 
+using GTMEngine.UI;
+
 namespace GTMEngine.Model.Characters
 {
     public class Hero : Entity
@@ -22,7 +24,9 @@ namespace GTMEngine.Model.Characters
         public int Experience { get; private set; }
         public int ExperienceToNextLevel { get; private set; }
 
-        public Texture2D CharImage { get; private set; }
+        private Sprite CharImage { get; set; }
+
+        public HUDDisplay MyHUDDisplay { get; private set; }
 
         #endregion
 
@@ -35,7 +39,10 @@ namespace GTMEngine.Model.Characters
             Experience = 0;
             ExperienceToNextLevel = Hero.LevelUpExperiences[1];
 
-            CharImage = texture; //this is provisory, there will be a different texture for the char image
+            CharImage = new Sprite("Char Image", texture, new Microsoft.Xna.Framework.Rectangle(10, 10, 150, 150)); //this is provisory, there will be a different texture for the char image
+            MyHUDDisplay = new HUDDisplay();
+            MyHUDDisplay.AddObject(CharImage);
+
         }
 
         #endregion

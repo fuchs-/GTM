@@ -73,7 +73,7 @@ namespace GTMEngine.Model
             {
                 current = enumerator.Current;
 
-                setEntityLocation(current, new MapLocation(0, i));
+                setEntityLocation(current, new MapLocation(0, 2 + 2*i));
                 Entities.Add(current);
 
                 enumerator.MoveNext();
@@ -89,7 +89,7 @@ namespace GTMEngine.Model
             {
                 current = enumerator.Current;
 
-                setEntityLocation(current, new MapLocation(2, i));
+                setEntityLocation(current, new MapLocation(15, 2 + 2 * i));
                 Entities.Add(current);
 
                 enumerator.MoveNext();
