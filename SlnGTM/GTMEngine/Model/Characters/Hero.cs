@@ -46,6 +46,7 @@ namespace GTMEngine.Model.Characters
             MyHUDDisplay = new HUDDisplay();
             MyHUDDisplay.AddObject(hdo);
 
+            //MyHUDDisplay.InitializeEnergyBars(this.InitialStats.HP, this.InitialStats.MP); NOT WORKING YET
         }
 
         #endregion
@@ -77,6 +78,7 @@ namespace GTMEngine.Model.Characters
             Level++;
 
             Stats += LevelUpStats;
+            InitialStats += LevelUpStats;
             ExperienceToNextLevel = Hero.LevelUpExperiences[Level];
 
             //probably some ability level up logic goes here

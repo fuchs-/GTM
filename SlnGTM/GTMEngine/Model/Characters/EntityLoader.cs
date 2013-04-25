@@ -44,12 +44,12 @@ namespace GTMEngine.Model.Characters
             ContentManager = contentManager;
 
             //Loading Textures
-            EnergyBarBox = ContentManager.Load<Texture2D>(@"Images\EnergyBarBox");
-            HPBar = ContentManager.Load<Texture2D>(@"Images\HPBar");
-            MPBar = ContentManager.Load<Texture2D>(@"Images\MPBar");
+            EnergyBarBox = ContentManager.Load<Texture2D>(@"Images\Entities\EnergyBarBox");
+            HPBar = ContentManager.Load<Texture2D>(@"Images\Entities\HPBar");
+            MPBar = ContentManager.Load<Texture2D>(@"Images\Entities\MPBar");
 
-            RedEntityBorder = ContentManager.Load<Texture2D>(@"Images\RedBorder");
-            BlueEntityBorder = ContentManager.Load<Texture2D>(@"Images\BlueBorder");
+            RedEntityBorder = ContentManager.Load<Texture2D>(@"Images\Entities\RedBorder");
+            BlueEntityBorder = ContentManager.Load<Texture2D>(@"Images\Entities\BlueBorder");
 
             IsReady = true;
         }

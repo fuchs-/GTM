@@ -25,11 +25,6 @@ C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GenerateResource.w
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\EnergyBarBox.xnb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HPBar.xnb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\MPBar.xnb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\BlueBorder.xnb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\RedBorder.xnb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\HeroList.xnb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\LevelUpExperiences.xnb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\Statistics.xnb
@@ -41,7 +36,6 @@ C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTMEngine.pdb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.exe
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\obj\x86\Debug\GTM.pdb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\Statistics.xnb
-C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUDGrid.xnb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\EnergyBarBox.xnb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HPBar.xnb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\MPBar.xnb
@@ -54,3 +48,12 @@ C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\Statistics.xnb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTMEngine.dll
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\GTMEngine.pdb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\EnergyBarBox.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\HPBar.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\MPBar.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\BlueBorder.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\RedBorder.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\Grid.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\EnergyBarBox.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\HPBar.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\MPBar.xnb

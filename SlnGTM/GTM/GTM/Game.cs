@@ -79,6 +79,7 @@ namespace GTM
 
             EntityLoader.Initialize(this.Content);
             Hero.LoadContent(this.Content);
+            HUD.Initialize(this.Content);
 
             //brings up the Hero Selection Screen
             HeroSelectionScreen hss = new HeroSelectionScreen();

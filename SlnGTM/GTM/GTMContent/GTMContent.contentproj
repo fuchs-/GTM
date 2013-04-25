@@ -64,27 +64,27 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
-    <Compile Include="Images\EnergyBarBox.png">
+    <Compile Include="Images\Entities\EnergyBarBox.png">
       <Name>EnergyBarBox</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\HPBar_LemonGreen.png">
+    <Compile Include="Images\Entities\HPBar_LemonGreen.png">
       <Name>HPBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\MPBar_BrightBlue.png">
+    <Compile Include="Images\Entities\MPBar_BrightBlue.png">
       <Name>MPBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\BlueBorder.png">
+    <Compile Include="Images\Entities\BlueBorder.png">
       <Name>BlueBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\RedBorder.png">
+    <Compile Include="Images\Entities\RedBorder.png">
       <Name>RedBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -116,8 +116,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\HUDGrid.png">
-      <Name>HUDGrid</Name>
+    <Compile Include="Images\HUD\Grid.png">
+      <Name>Grid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\HUD\EnergyBarBox.png">
+      <Name>EnergyBarBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\HUD\HPBar_LemonGreen.png">
+      <Name>HPBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\HUD\MPBar_BrightBlue.png">
+      <Name>MPBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -29,58 +29,85 @@
       <Time>2013-04-24T23:54:56.1700923-03:00</Time>
     </Item>
     <Item>
-      <Source>Images\EnergyBarBox.png</Source>
-      <Name>Images\EnergyBarBox</Name>
+      <Source>Images\Entities\EnergyBarBox.png</Source>
+      <Name>Images\Entities\EnergyBarBox</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\EnergyBarBox.xnb</Output>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\EnergyBarBox.xnb</Output>
       <Time>2013-04-24T23:54:56.1730924-03:00</Time>
     </Item>
     <Item>
-      <Source>Images\HPBar_LemonGreen.png</Source>
-      <Name>Images\HPBar</Name>
+      <Source>Images\Entities\HPBar_LemonGreen.png</Source>
+      <Name>Images\Entities\HPBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HPBar.xnb</Output>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\HPBar.xnb</Output>
       <Time>2013-04-24T23:54:56.1730924-03:00</Time>
     </Item>
     <Item>
-      <Source>Images\MPBar_BrightBlue.png</Source>
-      <Name>Images\MPBar</Name>
+      <Source>Images\Entities\MPBar_BrightBlue.png</Source>
+      <Name>Images\Entities\MPBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\MPBar.xnb</Output>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\MPBar.xnb</Output>
       <Time>2013-04-24T23:54:56.1740925-03:00</Time>
     </Item>
     <Item>
-      <Source>Images\BlueBorder.png</Source>
-      <Name>Images\BlueBorder</Name>
+      <Source>Images\Entities\BlueBorder.png</Source>
+      <Name>Images\Entities\BlueBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\BlueBorder.xnb</Output>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\BlueBorder.xnb</Output>
       <Time>2013-04-24T23:54:56.1720924-03:00</Time>
     </Item>
     <Item>
-      <Source>Images\RedBorder.png</Source>
-      <Name>Images\RedBorder</Name>
+      <Source>Images\Entities\RedBorder.png</Source>
+      <Name>Images\Entities\RedBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\RedBorder.xnb</Output>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\RedBorder.xnb</Output>
       <Time>2013-04-24T23:54:56.1750925-03:00</Time>
     </Item>
     <Item>
-      <Source>Images\HUDGrid.png</Source>
-      <Name>Images\HUDGrid</Name>
+      <Source>Images\HUD\Grid.png</Source>
+      <Name>Images\HUD\Grid</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUDGrid.xnb</Output>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\Grid.xnb</Output>
       <Time>2013-04-24T23:54:56.1740925-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\HUD\EnergyBarBox.png</Source>
+      <Name>Images\HUD\EnergyBarBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\EnergyBarBox.xnb</Output>
+      <Time>2013-04-25T17:40:09.5388806-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\HUD\HPBar_LemonGreen.png</Source>
+      <Name>Images\HUD\HPBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\HPBar.xnb</Output>
+      <Time>2013-04-25T17:41:49.0665733-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\HUD\MPBar_BrightBlue.png</Source>
+      <Name>Images\HUD\MPBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\MPBar.xnb</Output>
+      <Time>2013-04-25T17:44:46.4397185-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\HeroList.xml</Source>
@@ -156,7 +183,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\GTMEngine.dll</Key>
-        <Value>2013-04-24T23:56:15.2286141-03:00</Value>
+        <Value>2013-04-25T18:46:14.0986405-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
