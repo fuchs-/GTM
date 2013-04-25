@@ -108,7 +108,7 @@ namespace GTMEngine.Model
                 {
                     location = new MapLocation(x, y);
                     Tiles[x, y] = new Tile(TileTexture, location);      //Load the tile
-                    Tiles[x, y].Position = getScreenPosition(location); //Set the right position for it
+                    Tiles[x, y].SetPosition(getScreenPosition(location)); //Set the right position for it
                 }
             }
         }

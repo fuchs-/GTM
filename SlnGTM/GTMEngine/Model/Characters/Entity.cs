@@ -109,7 +109,7 @@ namespace GTMEngine.Model.Characters
             borderPosition -= new Vector2(1);
 
             if(HPBar != null) HPBar.SetPosition(barPosition);
-            if(Border != null) Border.Position = borderPosition;
+            if(Border != null) Border.SetPosition(borderPosition);
         }
 
         #endregion

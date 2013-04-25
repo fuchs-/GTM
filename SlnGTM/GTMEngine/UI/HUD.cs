@@ -31,8 +31,8 @@ namespace GTMEngine.UI
         public static Texture2D HPBarTexture { get { return hpBarTexture; } }
         public static Texture2D MPBarTexture { get { return mpBarTexture; } }
 
-        public static Vector2 HPBarPosition { get { return new Vector2(200, 450); } }
-        public static Vector2 MPBarPosition { get { return new Vector2(200, 500); } }
+        public static Vector2 HPBarPosition { get { return new Vector2(200, 10); } }
+        public static Vector2 MPBarPosition { get { return new Vector2(200, 45); } }
 
         #endregion
 

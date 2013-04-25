@@ -46,7 +46,7 @@ namespace GTMEngine.Model.Characters
             MyHUDDisplay = new HUDDisplay();
             MyHUDDisplay.AddObject(hdo);
 
-            //MyHUDDisplay.InitializeEnergyBars(this.InitialStats.HP, this.InitialStats.MP); NOT WORKING YET
+            MyHUDDisplay.InitializeEnergyBars(this.InitialStats.HP, this.InitialStats.MP);
         }
 
         #endregion

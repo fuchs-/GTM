@@ -29,8 +29,8 @@ namespace GTMEngine.UI
 
         public void InitializeEnergyBars(int maxHP, int maxMP)
         {
-            HPBar = new EnergyBar(maxHP, HUD.EnergyBarBox, HUD.HPBarTexture, HUD.HPBarPosition, new Vector2(3, 3));
-            MPBar = new EnergyBar(maxMP, HUD.EnergyBarBox, HUD.MPBarTexture, HUD.MPBarPosition, new Vector2(3, 3));
+            HPBar = new EnergyBar(maxHP, HUD.EnergyBarBox, HUD.HPBarTexture, HUD.HPBarPosition, HUD.HPBarPosition + new Vector2(3, 3));
+            MPBar = new EnergyBar(maxMP, HUD.EnergyBarBox, HUD.MPBarTexture, HUD.MPBarPosition, HUD.MPBarPosition + new Vector2(3));
 
             Sprite s = new Sprite("s", HUD.EnergyBarBox, new Vector2(200, 10));
 
