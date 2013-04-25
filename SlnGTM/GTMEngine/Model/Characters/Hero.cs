@@ -24,7 +24,7 @@ namespace GTMEngine.Model.Characters
         public int Experience { get; private set; }
         public int ExperienceToNextLevel { get; private set; }
 
-        private Sprite CharImage { get; set; }
+        private Texture2D CharImage { get; set; }
 
         public HUDDisplay MyHUDDisplay { get; private set; }
 
@@ -39,9 +39,12 @@ namespace GTMEngine.Model.Characters
             Experience = 0;
             ExperienceToNextLevel = Hero.LevelUpExperiences[1];
 
-            CharImage = new Sprite("Char Image", texture, new Microsoft.Xna.Framework.Rectangle(10, 10, 150, 150)); //this is provisory, there will be a different texture for the char image
+            CharImage = texture; //this is provisory, there will be a different texture for the char image
+
+            HUDDisplayObject hdo = new HUDDisplayObject(HUDDisplayObjectType.CharImage, CharImage);
+
             MyHUDDisplay = new HUDDisplay();
-            MyHUDDisplay.AddObject(CharImage);
+            MyHUDDisplay.AddObject(hdo);
 
         }
 
