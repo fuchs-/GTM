@@ -9,7 +9,6 @@ C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTMEngine\obj\x86\Debug\GTMEngine.pdb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\GTMEngine.dll
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\GTMEngine.pdb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\BXEL.dll
-C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\BXEL.pdb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\obj\x86\Debug\GTMEngine.dll

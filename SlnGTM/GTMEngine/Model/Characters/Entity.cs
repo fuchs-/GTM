@@ -93,7 +93,7 @@ namespace GTMEngine.Model.Characters
 
             base.Draw(spriteBatch);
 
-            HPBar.Draw(gameTime, spriteBatch);
+            HPBar.Draw(spriteBatch);
         }
 
         #endregion
@@ -108,7 +108,7 @@ namespace GTMEngine.Model.Characters
             barPosition.Y += 45;
             borderPosition -= new Vector2(1);
 
-            if(HPBar != null) HPBar.Position = barPosition;
+            if(HPBar != null) HPBar.SetPosition(barPosition);
             if(Border != null) Border.Position = borderPosition;
         }
 
