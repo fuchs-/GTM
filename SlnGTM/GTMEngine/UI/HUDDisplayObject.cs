@@ -13,8 +13,6 @@ namespace GTMEngine.UI
     public enum HUDDisplayObjectType
     { 
         CharImage,
-        HPBar,
-        MPBar,
         Ability1,
         Ability2,
         Ability3,

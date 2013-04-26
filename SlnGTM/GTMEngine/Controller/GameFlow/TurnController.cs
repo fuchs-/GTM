@@ -5,9 +5,9 @@ using System.Text;
 
 using GTMEngine.Model.Characters;
 
-namespace GTMEngine.Model.GameFlow
+namespace GTMEngine.Controller.GameFlow
 {
-    public class FlowController
+    public class TurnController
     {
         #region Properties
 
@@ -20,7 +20,7 @@ namespace GTMEngine.Model.GameFlow
 
         #region Constructors
 
-        public FlowController(Team redTeam, Team blueTeam)
+        public TurnController(Team redTeam, Team blueTeam)
         {
             RedTeam = redTeam;
             BlueTeam = blueTeam;

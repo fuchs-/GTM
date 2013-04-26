@@ -13,7 +13,7 @@ using BXEL.Graphics;
 
 using GTMEngine.Model;
 using GTMEngine.Model.Characters;
-using GTMEngine.Model.GameFlow;
+using GTMEngine.Controller.GameFlow;
 
 using GTMEngine.UI;
 
@@ -31,6 +31,7 @@ namespace GTM
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Map map;
+        TurnController turnController;
         FlowController flowController;
         HUD hud;
 
@@ -61,16 +62,15 @@ namespace GTM
         
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
 
             this.IsMouseVisible = true;
 
             map.Initialize(RedTeam, BlueTeam);
-            flowController = new FlowController(RedTeam, BlueTeam);
+            turnController = new TurnController(RedTeam, BlueTeam);
+            flowController = new FlowController();
 
-            hud.ChangeHUDDisplay(flowController.CurrentTurn.CurrentHero.MyHUDDisplay);
+            if (turnController.CurrentTurn != null) hud.ChangeHUDDisplay(turnController.CurrentTurn.CurrentHero.MyHUDDisplay);
         }
 
         protected override void LoadContent()
@@ -109,6 +109,7 @@ namespace GTM
                 this.Exit();
 
             //This block will get complicated soon
+            map.Update(gameTime);
 
             base.Update(gameTime);
         }

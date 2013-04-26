@@ -6,9 +6,12 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
+
 using BXEL.Graphics;
 
 using GTMEngine.Model.Characters;
+using GTMEngine.Controller;
+using GTMEngine.Controller.GameFlow;
 
 namespace GTMEngine.Model
 {
@@ -34,6 +37,8 @@ namespace GTMEngine.Model
 
         //Holds all the effects currently on the map
         //private List<Effect> Effects { get; set; }
+
+        public Rectangle MapRectangle { get; private set; }
 
         #endregion
 
@@ -94,6 +99,8 @@ namespace GTMEngine.Model
 
                 enumerator.MoveNext();
             }
+
+            MapRectangle = new Rectangle(0, 0, X * TileSize.X, Y * TileSize.Y);
         }
 
         public void LoadContent(ContentManager contentManager)
@@ -115,6 +122,22 @@ namespace GTMEngine.Model
 
         public void Update(GameTime gameTime)
         { 
+            switch(FlowController.CurrentGameState)
+            {
+                case GameFlowState.WaitingForPlayerAction:
+                    Tile t;
+                    if (InputController.LeftMouseButtonClicked() && InputController.IsMouseInside(MapRectangle))
+                    {
+                        t = getTileAtPoint(InputController.GetMousePosition());
+                        t.Color = Color.Red;
+                    }
+                    if (InputController.RightMouseButtonClicked() && InputController.IsMouseInside(MapRectangle))
+                    {
+                        t = getTileAtPoint(InputController.GetMousePosition());
+                        t.Color = Color.White;
+                    }
+                    break;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -183,6 +206,17 @@ namespace GTMEngine.Model
             }
 
             return ret;
+        }
+
+        public Tile getTileAtPoint(Point p)
+        {
+            foreach (Tile t in Tiles)
+            {
+                if (t.Rectangle.Contains(p))
+                    return t;
+            }
+
+            return null;
         }
 
         #endregion
