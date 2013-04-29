@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
 
 using BXEL.Graphics;
+using BXEL.DataStructures;
 
 using GTMEngine.Model.Characters;
 using GTMEngine.Controller;
@@ -156,6 +157,7 @@ namespace GTMEngine.Model
         }
 
         #endregion
+
 
         private void setEntityLocation(Entity e, MapLocation location)
         {
