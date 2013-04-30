@@ -30,6 +30,7 @@ namespace GTM
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        
         Map map;
         TurnController turnController;
         FlowController flowController;
@@ -66,9 +67,10 @@ namespace GTM
 
             this.IsMouseVisible = true;
 
-            map.Initialize(RedTeam, BlueTeam);
             turnController = new TurnController(RedTeam, BlueTeam);
             flowController = new FlowController();
+
+            map.Initialize(RedTeam, BlueTeam, turnController);
 
             if (turnController.CurrentTurn != null) hud.ChangeHUDDisplay(turnController.CurrentTurn.CurrentHero.MyHUDDisplay);
         }

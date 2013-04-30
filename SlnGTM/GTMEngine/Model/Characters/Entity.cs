@@ -112,6 +112,11 @@ namespace GTMEngine.Model.Characters
             if(Border != null) Border.SetPosition(borderPosition);
         }
 
+        public bool Equals(Entity e)
+        {
+            return this.id == e.id;
+        }
+
         #endregion
     }
 }

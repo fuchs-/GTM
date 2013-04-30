@@ -43,6 +43,8 @@ namespace GTMEngine.Model
 
         private Graph TileGraph { get; set; }
 
+        private TurnController TurnController { get; set; }
+
         #endregion
 
         #region Constructor
@@ -68,7 +70,7 @@ namespace GTMEngine.Model
 
         #region Flow Methods
 
-        public void Initialize(Team redTeam, Team blueTeam)
+        public void Initialize(Team redTeam, Team blueTeam, TurnController turnController)
         {
             List<Hero> heroes;
             List<Hero>.Enumerator enumerator;
@@ -117,9 +119,14 @@ namespace GTMEngine.Model
 
             foreach (Entity e in Entities)
             {
-                l = e.Location;
-                RemoveFromGraph(Tiles[l.X, l.Y]);
+                if (!turnController.CurrentTurn.CurrentHero.Equals(e))
+                {
+                    l = e.Location;
+                    RemoveFromGraph(Tiles[l.X, l.Y]);
+                }
             }
+
+            TurnController = turnController;
         }
 
         public void LoadContent(ContentManager contentManager)
@@ -144,17 +151,41 @@ namespace GTMEngine.Model
             switch(FlowController.CurrentGameState)
             {
                 case GameFlowState.WaitingForPlayerAction:
-                    Tile t;
-                    if (InputController.LeftMouseButtonClicked() && InputController.IsMouseInside(MapRectangle))
+                    
+                    if (InputController.IsMouseInside(MapRectangle) && InputController.RightMouseButtonClicked())
                     {
-                        t = GetTileAtPoint(InputController.GetMousePosition());
-                        t.Color = Color.Red;
+                        Tile source, destination;
+                        MapLocation l;
+
+                        l = TurnController.CurrentTurn.CurrentHero.Location;
+                        source = Tiles[l.X, l.Y];
+
+                        destination = GetTileAtPoint(InputController.GetMousePosition());
+
+                        BreadthFirstSearch bfs = new BreadthFirstSearch(TileGraph);
+
+                        int length = bfs.SearchForVerticeFromVertice(source.Vertice, destination.Vertice);
+
+                        Console.WriteLine(length);
+
+                        if (length > 0 && length <= TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed)
+                        {
+                            Console.WriteLine("Possible route:");
+                            Path p = bfs.GetPath(source.Vertice, destination.Vertice);
+                            TileVertice tv;
+                            while (!p.IsOver())
+                            {
+                                tv = (TileVertice) p.NextVertice;
+                                Console.WriteLine(tv.Location);
+                            }
+                        }
+                        else
+                        {
+                            if (length == -1) Console.WriteLine("Couldnt find route");
+                            if (length > TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed) Console.WriteLine("Not enough movement speed");
+                        }
                     }
-                    if (InputController.RightMouseButtonClicked() && InputController.IsMouseInside(MapRectangle))
-                    {
-                        t = GetTileAtPoint(InputController.GetMousePosition());
-                        t.Color = Color.White;
-                    }
+                    
                     break;
             }
         }
