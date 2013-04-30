@@ -41,6 +41,8 @@ namespace GTMEngine.Model
 
         public Rectangle MapRectangle { get; private set; }
 
+        private Graph TileGraph { get; set; }
+
         #endregion
 
         #region Constructor
@@ -56,6 +58,8 @@ namespace GTMEngine.Model
 
             //Setting entitie's matrix
             Entities = new List<Entity>();
+
+            TileGraph = new Graph();
         }
 
         #endregion
@@ -79,7 +83,7 @@ namespace GTMEngine.Model
             {
                 current = enumerator.Current;
 
-                setEntityLocation(current, new MapLocation(0, 2 + 2*i));
+                SetEntityLocation(current, new MapLocation(0, 2 + 2*i));
                 Entities.Add(current);
 
                 enumerator.MoveNext();
@@ -95,13 +99,27 @@ namespace GTMEngine.Model
             {
                 current = enumerator.Current;
 
-                setEntityLocation(current, new MapLocation(15, 2 + 2 * i));
+                SetEntityLocation(current, new MapLocation(15, 2 + 2 * i));
                 Entities.Add(current);
 
                 enumerator.MoveNext();
             }
 
             MapRectangle = new Rectangle(0, 0, X * TileSize.X, Y * TileSize.Y);
+
+            foreach (Tile t in Tiles)
+            {
+                SetAdjacentTiles(t);
+                TileGraph.AddVertice(t.Vertice);
+            }
+
+            MapLocation l;
+
+            foreach (Entity e in Entities)
+            {
+                l = e.Location;
+                RemoveFromGraph(Tiles[l.X, l.Y]);
+            }
         }
 
         public void LoadContent(ContentManager contentManager)
@@ -116,7 +134,7 @@ namespace GTMEngine.Model
                 {
                     location = new MapLocation(x, y);
                     Tiles[x, y] = new Tile(TileTexture, location);      //Load the tile
-                    Tiles[x, y].SetPosition(getScreenPosition(location)); //Set the right position for it
+                    Tiles[x, y].SetPosition(GetScreenPosition(location)); //Set the right position for it
                 }
             }
         }
@@ -129,12 +147,12 @@ namespace GTMEngine.Model
                     Tile t;
                     if (InputController.LeftMouseButtonClicked() && InputController.IsMouseInside(MapRectangle))
                     {
-                        t = getTileAtPoint(InputController.GetMousePosition());
+                        t = GetTileAtPoint(InputController.GetMousePosition());
                         t.Color = Color.Red;
                     }
                     if (InputController.RightMouseButtonClicked() && InputController.IsMouseInside(MapRectangle))
                     {
-                        t = getTileAtPoint(InputController.GetMousePosition());
+                        t = GetTileAtPoint(InputController.GetMousePosition());
                         t.Color = Color.White;
                     }
                     break;
@@ -159,13 +177,13 @@ namespace GTMEngine.Model
         #endregion
 
 
-        private void setEntityLocation(Entity e, MapLocation location)
+        private void SetEntityLocation(Entity e, MapLocation location)
         {
             e.Location = location;
-            e.SetNewPosition(getScreenPosition(location));
+            e.SetNewPosition(GetScreenPosition(location));
         }
 
-        private Vector2 getScreenPosition(MapLocation location)
+        private Vector2 GetScreenPosition(MapLocation location)
         {
             Vector2 ret = Vector2.Zero;
 
@@ -178,7 +196,7 @@ namespace GTMEngine.Model
             return ret;
         }
 
-        public Entity getEntityAtLocation(MapLocation location)
+        public Entity GetEntityAtLocation(MapLocation location)
         {
             Entity ret = null;
 
@@ -194,7 +212,7 @@ namespace GTMEngine.Model
             return ret;
         }
 
-        public Entity getEntityForName(String name)
+        public Entity GetEntityForName(String name)
         {
             Entity ret = null;
 
@@ -210,7 +228,7 @@ namespace GTMEngine.Model
             return ret;
         }
 
-        public Tile getTileAtPoint(Point p)
+        public Tile GetTileAtPoint(Point p)
         {
             foreach (Tile t in Tiles)
             {
@@ -219,6 +237,28 @@ namespace GTMEngine.Model
             }
 
             return null;
+        }
+
+        private void SetAdjacentTiles(Tile t)
+        {
+            //Left
+            if (t.Location.X > 0) t.AddAdjacentTile(Tiles[t.Location.X - 1, t.Location.Y]);
+            //Right
+            if (t.Location.X < X - 1) t.AddAdjacentTile(Tiles[t.Location.X + 1, t.Location.Y]);
+            //Up
+            if (t.Location.Y > 0) t.AddAdjacentTile(Tiles[t.Location.X, t.Location.Y - 1]);
+            //Down
+            if (t.Location.Y < Y - 1) t.AddAdjacentTile(Tiles[t.Location.X, t.Location.Y + 1]);
+        }
+
+        private void AddToGraph(Tile t)
+        {
+            TileGraph.AddVertice(t.Vertice);
+        }
+
+        private void RemoveFromGraph(Tile t)
+        {
+            TileGraph.RemoveVertice(t.Vertice);
         }
 
         #endregion
