@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using GTMEngine.Model;
 using GTMEngine.Model.Characters;
 
 namespace GTMEngine.Controller.GameFlow
@@ -11,6 +12,7 @@ namespace GTMEngine.Controller.GameFlow
     {
         #region Properties
 
+        private Map Map;
         private Team RedTeam, BlueTeam;
 
         private Queue<Player> Turns { get; set; }
@@ -20,8 +22,9 @@ namespace GTMEngine.Controller.GameFlow
 
         #region Constructors
 
-        public TurnController(Team redTeam, Team blueTeam)
+        public TurnController(Map map, Team redTeam, Team blueTeam)
         {
+            Map = map;
             RedTeam = redTeam;
             BlueTeam = blueTeam;
 
@@ -29,8 +32,10 @@ namespace GTMEngine.Controller.GameFlow
 
             OrganizeTurnQueue();
 
-            if(Turns.Count > 0)
+            if (Turns.Count > 0)
+            {
                 CurrentTurn = Turns.Dequeue();
+            }
         }
 
         #endregion
@@ -59,7 +64,9 @@ namespace GTMEngine.Controller.GameFlow
         public void NextTurn()
         {
             Turns.Enqueue(CurrentTurn);
+            Map.TurnEnded(CurrentTurn.CurrentHero);
             CurrentTurn = Turns.Dequeue();
+            Map.TurnStarted();
         }
 
         #endregion

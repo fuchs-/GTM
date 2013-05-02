@@ -31,6 +31,11 @@ namespace GTMEngine.Model
             return Location.ToString();
         }
 
+        public override string ToString()
+        {
+            return Location.ToString();
+        }
+
         #endregion
     }
 }

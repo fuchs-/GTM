@@ -72,6 +72,8 @@ namespace GTMEngine.Model
 
         public void Initialize(Team redTeam, Team blueTeam, TurnController turnController)
         {
+            TurnController = turnController;
+
             List<Hero> heroes;
             List<Hero>.Enumerator enumerator;
             Hero current = null;
@@ -119,14 +121,11 @@ namespace GTMEngine.Model
 
             foreach (Entity e in Entities)
             {
-                if (!turnController.CurrentTurn.CurrentHero.Equals(e))
-                {
                     l = e.Location;
                     RemoveFromGraph(Tiles[l.X, l.Y]);
-                }
             }
 
-            TurnController = turnController;
+            TurnStarted();
         }
 
         public void LoadContent(ContentManager contentManager)
@@ -185,6 +184,7 @@ namespace GTMEngine.Model
                     }
                     
                     break;
+
                 case GameFlowState.EntityMoving:
                     foreach (Entity e in Entities)
                         e.Update(gameTime);
@@ -298,6 +298,20 @@ namespace GTMEngine.Model
         private void RemoveFromGraph(Tile t)
         {
             TileGraph.RemoveVertice(t.Vertice);
+        }
+
+        public void TurnStarted()
+        {
+            MapLocation l = TurnController.CurrentTurn.CurrentHero.Location;
+            Tile t = GetTileAtLocation(l);
+            t.RestoreAdjacencies();
+            AddToGraph(t);
+        }
+
+        public void TurnEnded(Hero hero)
+        {
+            MapLocation l = TurnController.CurrentTurn.CurrentHero.Location;
+            RemoveFromGraph(GetTileAtLocation(l));
         }
 
         #endregion

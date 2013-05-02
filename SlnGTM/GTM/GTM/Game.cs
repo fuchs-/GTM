@@ -67,7 +67,7 @@ namespace GTM
 
             this.IsMouseVisible = true;
 
-            turnController = new TurnController(RedTeam, BlueTeam);
+            turnController = new TurnController(map, RedTeam, BlueTeam);
             flowController = new FlowController();
 
             map.Initialize(RedTeam, BlueTeam, turnController);
