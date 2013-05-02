@@ -12,7 +12,8 @@ namespace GTMEngine.Controller.GameFlow
 {
     public enum GameFlowState 
     { 
-        WaitingForPlayerAction
+        WaitingForPlayerAction,
+        EntityMoving
     }
     //This class gives me goosebumps...
     //Good luck bra
@@ -20,7 +21,7 @@ namespace GTMEngine.Controller.GameFlow
     {
         #region Properties
 
-        public static GameFlowState CurrentGameState { get; private set; }
+        public static GameFlowState CurrentGameState { get; set; }
 
         #endregion
 

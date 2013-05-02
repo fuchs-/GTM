@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
 using BXEL.Graphics;
+using BXEL.DataStructures;
+
+using GTMEngine.Controller.GameFlow;
 
 namespace GTMEngine.Model.Characters
 {
@@ -46,25 +49,34 @@ namespace GTMEngine.Model.Characters
         //this is a unique identifier for each entity
         public int id { get; private set; }
 
+        private Animation Animation { get; set; }
+        private bool Animating { get; set; }
+
         #endregion
 
         #region Constructors
 
-        public Entity(int ID, String name, Texture2D texture, Statistics stats) : base(name, texture, Vector2.Zero, new Size(50, 50))
+        public Entity(int ID, Map map, String name, Texture2D texture, Statistics stats) : base(name, texture, Vector2.Zero, new Size(50, 50))
         {
             this.id = ID;
 
             Location = new MapLocation();
             InitialStats = stats;
             Stats = stats;
+
+            Animating = false;
+            Animation = new Animation(this, map, texture);
         }
 
-        public Entity(int ID, String name, Texture2D texture) : base(name, texture, Vector2.Zero, new Size(50, 50))
+        public Entity(int ID, Map map, String name, Texture2D texture) : base(name, texture, Vector2.Zero, new Size(50, 50))
         {
             this.id = ID;
 
             Location = new MapLocation();
             InitialStats = new Statistics();
+
+            Animating = false;
+            Animation = new Animation(this, map, texture);
         }
 
         #endregion
@@ -87,11 +99,20 @@ namespace GTMEngine.Model.Characters
             Border = border;
         }
 
+        public override void Update(GameTime gameTime)
+        {
+            UpdateBarAndBorder();
+            Animation.Update(gameTime);
+
+            base.Update(gameTime);
+        }
+
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (Border != null) Border.Draw(spriteBatch);
 
-            base.Draw(spriteBatch);
+            if (Animating) Animation.Draw(spriteBatch);
+            else base.Draw(spriteBatch);
 
             HPBar.Draw(spriteBatch);
         }
@@ -102,19 +123,43 @@ namespace GTMEngine.Model.Characters
         {
             Position = position;
 
-            Vector2 barPosition = position;
-            Vector2 borderPosition = position;
+            UpdateBarAndBorder();
+        }
+
+        public void UpdateBarAndBorder()
+        {
+            Vector2 barPosition = Position;
+            Vector2 borderPosition = Position;
+
+            if (Animating)
+            {
+                barPosition = Animation.Position;
+                borderPosition = Animation.Position;
+            }
 
             barPosition.Y += 45;
             borderPosition -= new Vector2(1);
 
-            if(HPBar != null) HPBar.SetPosition(barPosition);
-            if(Border != null) Border.SetPosition(borderPosition);
+            if (HPBar != null) HPBar.SetPosition(barPosition);
+            if (Border != null) Border.SetPosition(borderPosition);
         }
-
+        
         public bool Equals(Entity e)
         {
             return this.id == e.id;
+        }
+
+        public void Move(Path path)
+        {
+            Animation.SetAnimationPath(path);
+            Animating = true;
+        }
+
+        public void AnimationEnded()
+        {
+            Animating = false;
+            FlowController.CurrentGameState = GameFlowState.WaitingForPlayerAction;
+            Position = Animation.Position;
         }
 
         #endregion

@@ -32,7 +32,7 @@ namespace GTMEngine.Model.Characters
 
         #region Constructors
 
-        public Hero(int ID, string name, Texture2D texture, Statistics baseStats) : base(ID, name, texture, baseStats)
+        public Hero(int ID, Map map, string name, Texture2D texture, Statistics baseStats) : base(ID, map, name, texture, baseStats)
         {
             LevelUpStats = new Statistics();
             Level = 1;

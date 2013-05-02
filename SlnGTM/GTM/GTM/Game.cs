@@ -79,7 +79,7 @@ namespace GTM
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            EntityLoader.Initialize(this.Content);
+            EntityLoader.Initialize(this.Content, map);
             Hero.LoadContent(this.Content);
             HUD.Initialize(this.Content);
 

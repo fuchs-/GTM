@@ -172,12 +172,10 @@ namespace GTMEngine.Model
                         {
                             Console.WriteLine("Possible route:");
                             Path p = bfs.GetPath(source.Vertice, destination.Vertice);
-                            TileVertice tv;
-                            while (!p.IsOver())
-                            {
-                                tv = (TileVertice) p.NextVertice;
-                                Console.WriteLine(tv.Location);
-                            }
+
+                            TurnController.CurrentTurn.CurrentHero.Move(p);
+                            FlowController.CurrentGameState = GameFlowState.EntityMoving;
+
                         }
                         else
                         {
@@ -187,6 +185,11 @@ namespace GTMEngine.Model
                     }
                     
                     break;
+                case GameFlowState.EntityMoving:
+                    foreach (Entity e in Entities)
+                        e.Update(gameTime);
+                    break;
+
             }
         }
 
@@ -214,7 +217,7 @@ namespace GTMEngine.Model
             e.SetNewPosition(GetScreenPosition(location));
         }
 
-        private Vector2 GetScreenPosition(MapLocation location)
+        public Vector2 GetScreenPosition(MapLocation location)
         {
             Vector2 ret = Vector2.Zero;
 
@@ -242,7 +245,7 @@ namespace GTMEngine.Model
 
             return ret;
         }
-
+        
         public Entity GetEntityForName(String name)
         {
             Entity ret = null;
@@ -257,6 +260,11 @@ namespace GTMEngine.Model
             }
 
             return ret;
+        }
+
+        public Tile GetTileAtLocation(MapLocation location)
+        {
+            return Tiles[location.X, location.Y];
         }
 
         public Tile GetTileAtPoint(Point p)

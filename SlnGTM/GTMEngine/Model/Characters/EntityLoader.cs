@@ -18,6 +18,8 @@ namespace GTMEngine.Model.Characters
 
         private static ContentManager ContentManager { get; set; }
 
+        private static Map Map { get; set; }
+
         public static bool IsReady { get; private set; }
 
         #region Textures
@@ -35,13 +37,14 @@ namespace GTMEngine.Model.Characters
 
         #region Methods
 
-        public static void Initialize(ContentManager contentManager)
+        public static void Initialize(ContentManager contentManager, Map map)
         {
             if (contentManager == null) return;
 
             CurrentID = 0;
 
             ContentManager = contentManager;
+            Map = map;
 
             //Loading Textures
             EnergyBarBox = ContentManager.Load<Texture2D>(@"Images\Entities\EnergyBarBox");
@@ -62,7 +65,7 @@ namespace GTMEngine.Model.Characters
 
             Texture2D charTexture = ContentManager.Load<Texture2D>(@"Heroes\" + heroName + @"\char");
 
-            ret = new Hero(CurrentID++, heroName, charTexture, ContentManager.Load<Statistics>(@"Heroes\" + heroName + @"\Statistics"));
+            ret = new Hero(CurrentID++, Map, heroName, charTexture, ContentManager.Load<Statistics>(@"Heroes\" + heroName + @"\Statistics"));
 
             ret.Initialize(EnergyBarBox, HPBar, GetBorderSprite(color));
 

@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
-      <Time>2013-04-29T19:12:51.7538524-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\emptyTile.xnb</Output>
+      <Time>2013-04-15T00:53:34.5019058-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Ichigo\char.jpg</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb</Output>
-      <Time>2013-04-29T19:12:51.7268509-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\char.xnb</Output>
+      <Time>2013-04-15T00:53:34.5019058-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Byakuya\char.jpg</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb</Output>
-      <Time>2013-04-29T19:12:51.7238507-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\char.xnb</Output>
+      <Time>2013-04-15T00:53:34.5009058-03:00</Time>
     </Item>
     <Item>
       <Source>Images\Entities\EnergyBarBox.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\EnergyBarBox.xnb</Output>
-      <Time>2013-04-29T19:12:51.7298511-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\EnergyBarBox.xnb</Output>
+      <Time>2013-04-25T18:58:48.1594884-03:00</Time>
     </Item>
     <Item>
       <Source>Images\Entities\HPBar_LemonGreen.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\HPBar.xnb</Output>
-      <Time>2013-04-29T19:12:51.7398516-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\HPBar.xnb</Output>
+      <Time>2013-04-25T18:58:48.1604885-03:00</Time>
     </Item>
     <Item>
       <Source>Images\Entities\MPBar_BrightBlue.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\MPBar.xnb</Output>
-      <Time>2013-04-29T19:12:51.7398516-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\MPBar.xnb</Output>
+      <Time>2013-04-25T18:58:48.1604885-03:00</Time>
     </Item>
     <Item>
       <Source>Images\Entities\BlueBorder.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\BlueBorder.xnb</Output>
-      <Time>2013-04-29T19:12:51.728851-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\BlueBorder.xnb</Output>
+      <Time>2013-04-25T18:58:48.1594884-03:00</Time>
     </Item>
     <Item>
       <Source>Images\Entities\RedBorder.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\RedBorder.xnb</Output>
-      <Time>2013-04-29T19:12:51.7408517-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\Entities\RedBorder.xnb</Output>
+      <Time>2013-04-25T18:58:48.1614885-03:00</Time>
     </Item>
     <Item>
       <Source>Images\HUD\Grid.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\Grid.xnb</Output>
-      <Time>2013-04-29T19:12:51.7418517-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\Grid.xnb</Output>
+      <Time>2013-04-25T18:58:48.1614885-03:00</Time>
     </Item>
     <Item>
       <Source>Images\HUD\EnergyBarBox.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\EnergyBarBox.xnb</Output>
-      <Time>2013-04-29T19:12:51.7418517-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\EnergyBarBox.xnb</Output>
+      <Time>2013-04-25T18:58:48.1614885-03:00</Time>
     </Item>
     <Item>
       <Source>Images\HUD\HPBar_LemonGreen.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\HPBar.xnb</Output>
-      <Time>2013-04-29T19:12:51.7428518-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\HPBar.xnb</Output>
+      <Time>2013-04-25T18:58:48.1624886-03:00</Time>
     </Item>
     <Item>
       <Source>Images\HUD\MPBar_BrightBlue.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\MPBar.xnb</Output>
-      <Time>2013-04-29T19:12:51.7528524-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\HUD\MPBar.xnb</Output>
+      <Time>2013-04-25T18:58:48.1634886-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\HeroList.xml</Source>
@@ -115,8 +115,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\HeroList.xnb</Output>
-      <Time>2013-04-29T19:12:51.7248508-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\HeroList.xnb</Output>
+      <Time>2013-04-24T00:20:07.4530244-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\LevelUpExperiences.xml</Source>
@@ -124,8 +124,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\LevelUpExperiences.xnb</Output>
-      <Time>2013-04-29T19:12:51.7278509-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\LevelUpExperiences.xnb</Output>
+      <Time>2013-04-24T00:20:07.4530244-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Ichigo\Statistics.xml</Source>
@@ -133,8 +133,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\Statistics.xnb</Output>
-      <Time>2013-04-29T19:12:51.7258508-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Ichigo\Statistics.xnb</Output>
+      <Time>2013-05-01T00:18:51.3003592-03:00</Time>
     </Item>
     <Item>
       <Source>Heroes\Byakuya\Statistics.xml</Source>
@@ -142,8 +142,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\Statistics.xnb</Output>
-      <Time>2013-04-29T19:12:51.7238507-03:00</Time>
+      <Output>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Heroes\Byakuya\Statistics.xnb</Output>
+      <Time>2013-04-24T00:20:07.4530244-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -151,10 +151,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTMContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -182,12 +182,12 @@
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\GTMEngine.dll</Key>
-        <Value>2013-04-30T20:12:07.1524255-03:00</Value>
+        <Key>C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTMEngine\bin\x86\Debug\GTMEngine.dll</Key>
+        <Value>2013-05-01T22:31:10.9200487-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-03-16T00:37:11.3080573-03:00</Value>
+        <Value>2012-04-01T23:42:04.399319-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
