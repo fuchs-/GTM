@@ -65,6 +65,7 @@ namespace GTMEngine.Controller.GameFlow
         {
             Turns.Enqueue(CurrentTurn);
             Map.TurnEnded(CurrentTurn.CurrentHero);
+            CurrentTurn.CurrentHero.TurnEnded();
             CurrentTurn = Turns.Dequeue();
             Map.TurnStarted();
         }

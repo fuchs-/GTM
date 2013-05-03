@@ -17,15 +17,31 @@ namespace GTMEngine.UI
         public EnergyBar HPBar { get; private set; }
         public EnergyBar MPBar { get; private set; }
 
+        public UIButton NextTurnButton { get; private set; }
+
         #endregion
 
         #region Constructors
 
-        public HUDDisplay() : base("HUDDisplay", null, HUD.HUDPosition, HUD.HUDSize, Color.White) { }
+        public HUDDisplay() : base("HUDDisplay", null, HUD.HUDPosition, HUD.HUDSize, Color.White) 
+        {
+            NextTurnButton = new UIButton("Next Turn", new Sprite("Normal", HUD.NextTurnButtonTexture, HUD.NextTurnButtonPosition));
+            AddObject(NextTurnButton);
+        }
 
         #endregion
 
         #region Methods
+
+        #region Flow Methods
+
+        public override void Update(GameTime gameTime)
+        {
+            NextTurnButton.Update(gameTime);
+            base.Update(gameTime);
+        }
+
+        #endregion
 
         public void InitializeEnergyBars(int maxHP, int maxMP)
         {

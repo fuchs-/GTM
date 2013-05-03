@@ -19,6 +19,7 @@ namespace GTMEngine.UI
         private static Texture2D energyBarBox;
         private static Texture2D hpBarTexture;
         private static Texture2D mpBarTexture;
+        private static Texture2D nextTurnButtonTexture;
 
         #endregion
 
@@ -33,6 +34,9 @@ namespace GTMEngine.UI
 
         public static Vector2 HPBarPosition { get { return new Vector2(175, 10); } }
         public static Vector2 MPBarPosition { get { return new Vector2(175, 45); } }
+
+        public static Texture2D NextTurnButtonTexture { get { return nextTurnButtonTexture; } }
+        public static Vector2 NextTurnButtonPosition { get { return new Vector2(645, 15); } }
 
         #endregion
 
@@ -52,6 +56,8 @@ namespace GTMEngine.UI
             energyBarBox = contentManager.Load<Texture2D>(@"Images\HUD\EnergyBarBox");
             hpBarTexture = contentManager.Load<Texture2D>(@"Images\HUD\HPBar");
             mpBarTexture = contentManager.Load<Texture2D>(@"Images\HUD\MPBar");
+
+            nextTurnButtonTexture = contentManager.Load<Texture2D>(@"Images\HUD\NextTurnButton");
         }
 
         public void LoadContent(ContentManager contentManager)
