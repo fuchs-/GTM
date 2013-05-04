@@ -8,9 +8,11 @@ using BXEL.Graphics;
 
 using Microsoft.Xna.Framework;
 
+using GTMEngine.Controller;
+
 namespace GTMEngine.UI
 {
-    public class HUDDisplay : UIPanel
+    public class HUDDisplay : UIPanel , UIButtonListener
     {
         #region Properties 
 
@@ -27,6 +29,8 @@ namespace GTMEngine.UI
         {
             NextTurnButton = new UIButton("Next Turn", new Sprite("Normal", HUD.NextTurnButtonTexture, HUD.NextTurnButtonPosition));
             AddObject(NextTurnButton);
+
+            NextTurnButton.AddListener(this);
         }
 
         #endregion
@@ -37,8 +41,18 @@ namespace GTMEngine.UI
 
         public override void Update(GameTime gameTime)
         {
-            NextTurnButton.Update(gameTime);
             base.Update(gameTime);
+
+            Rectangle r = this.NextTurnButton.Rectangle;
+
+            if (InputController.IsMouseInside(r) && InputController.LeftMouseButtonClicked()) HUD.Map.TurnController.NextTurn();
+
+            /*
+            if (NextTurnButton.IsPressed)
+            {
+                HUD.Map.TurnController.NextTurn();
+            }
+             */
         }
 
         #endregion
@@ -52,6 +66,11 @@ namespace GTMEngine.UI
 
             this.AddObject(HPBar);
             this.AddObject(MPBar);
+        }
+
+        public void ButtonPressed(string buttonName)
+        {
+            if (buttonName == "Next Turn") Console.WriteLine("Butao pressionado");
         }
 
         #endregion

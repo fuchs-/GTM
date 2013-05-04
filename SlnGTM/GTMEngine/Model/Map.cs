@@ -43,7 +43,7 @@ namespace GTMEngine.Model
 
         private Graph TileGraph { get; set; }
 
-        private TurnController TurnController { get; set; }
+        public TurnController TurnController { get; private set; }
 
         #endregion
 
@@ -146,7 +146,7 @@ namespace GTMEngine.Model
         }
 
         public void Update(GameTime gameTime)
-        { 
+        {
             switch(FlowController.CurrentGameState)
             {
                 case GameFlowState.WaitingForPlayerAction:
@@ -167,7 +167,7 @@ namespace GTMEngine.Model
 
                         Console.WriteLine(length);
 
-                        if (length > 0 && length <= TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed)
+                        if (length > 0 && length <= TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed && !TurnController.CurrentTurn.CurrentHero.HasMoved)
                         {
                             Console.WriteLine("Possible route:");
                             Path p = bfs.GetPath(source.Vertice, destination.Vertice);
@@ -180,12 +180,14 @@ namespace GTMEngine.Model
                         {
                             if (length == -1) Console.WriteLine("Couldnt find route");
                             if (length > TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed) Console.WriteLine("Not enough movement speed");
+                            if (TurnController.CurrentTurn.CurrentHero.HasMoved) Console.WriteLine("This hero has already moved this turn");
                         }
                     }
                     
                     break;
 
                 case GameFlowState.EntityMoving:
+
                     foreach (Entity e in Entities)
                         e.Update(gameTime);
                     break;
@@ -306,6 +308,8 @@ namespace GTMEngine.Model
             Tile t = GetTileAtLocation(l);
             t.RestoreAdjacencies();
             AddToGraph(t);
+
+            
         }
 
         public void TurnEnded(Hero hero)

@@ -67,7 +67,7 @@ namespace GTM
 
             this.IsMouseVisible = true;
 
-            turnController = new TurnController(map, RedTeam, BlueTeam);
+            turnController = new TurnController(map, hud, RedTeam, BlueTeam);
             flowController = new FlowController();
 
             map.Initialize(RedTeam, BlueTeam, turnController);
@@ -81,7 +81,7 @@ namespace GTM
 
             EntityLoader.Initialize(this.Content, map);
             Hero.LoadContent(this.Content);
-            HUD.Initialize(this.Content);
+            HUD.Initialize(this.Content, map);
 
             //brings up the Hero Selection Screen
             HeroSelectionScreen hss = new HeroSelectionScreen();
@@ -110,8 +110,9 @@ namespace GTM
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            //This block will get complicated soon
+            //This block will get complicated soon enough
             map.Update(gameTime);
+            hud.Update(gameTime);
 
             base.Update(gameTime);
         }

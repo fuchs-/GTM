@@ -5,6 +5,7 @@ using System.Text;
 
 using GTMEngine.Model;
 using GTMEngine.Model.Characters;
+using GTMEngine.UI;
 
 namespace GTMEngine.Controller.GameFlow
 {
@@ -13,6 +14,7 @@ namespace GTMEngine.Controller.GameFlow
         #region Properties
 
         private Map Map;
+        private HUD HUD;
         private Team RedTeam, BlueTeam;
 
         private Queue<Player> Turns { get; set; }
@@ -22,9 +24,10 @@ namespace GTMEngine.Controller.GameFlow
 
         #region Constructors
 
-        public TurnController(Map map, Team redTeam, Team blueTeam)
+        public TurnController(Map map, HUD hud, Team redTeam, Team blueTeam)
         {
             Map = map;
+            HUD = hud;
             RedTeam = redTeam;
             BlueTeam = blueTeam;
 
@@ -68,6 +71,8 @@ namespace GTMEngine.Controller.GameFlow
             CurrentTurn.CurrentHero.TurnEnded();
             CurrentTurn = Turns.Dequeue();
             Map.TurnStarted();
+
+            HUD.ChangeHUDDisplay(CurrentTurn.CurrentHero.MyHUDDisplay);
         }
 
         #endregion

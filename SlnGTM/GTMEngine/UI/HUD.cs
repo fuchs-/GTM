@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
+using GTMEngine.Model;
+
 namespace GTMEngine.UI
 {
     public class HUD
@@ -24,6 +26,8 @@ namespace GTMEngine.UI
         #endregion
 
         #region Static Properties
+
+        public static Map Map;
 
         public static Vector2 HUDPosition { get { return new Vector2(0, 450); } }
         public static Size HUDSize { get { return new Size(900, 170); } }
@@ -51,8 +55,10 @@ namespace GTMEngine.UI
 
         #region Flow Methods
 
-        public static void Initialize(ContentManager contentManager)
+        public static void Initialize(ContentManager contentManager, Map map)
         {
+            Map = map;
+
             energyBarBox = contentManager.Load<Texture2D>(@"Images\HUD\EnergyBarBox");
             hpBarTexture = contentManager.Load<Texture2D>(@"Images\HUD\HPBar");
             mpBarTexture = contentManager.Load<Texture2D>(@"Images\HUD\MPBar");
@@ -63,6 +69,11 @@ namespace GTMEngine.UI
         public void LoadContent(ContentManager contentManager)
         {
             Grid = new Sprite("HUDGrid", contentManager.Load<Texture2D>(@"Images\HUD\Grid"), HUDPosition);
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            CurrentHUDDisplay.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)

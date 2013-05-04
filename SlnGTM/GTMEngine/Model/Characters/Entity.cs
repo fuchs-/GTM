@@ -153,17 +153,10 @@ namespace GTMEngine.Model.Characters
 
         public void Move(Path path)
         {
-            if (!HasMoved)
-            {
-                Console.WriteLine("Moving");
-                Animation.SetAnimationPath(path);
-                Animating = true;
-                HasMoved = true;
-            }
-            else
-            {
-                Console.WriteLine("This entity already moved on this turn");
-            }
+            Console.WriteLine("Moving");
+            Animation.SetAnimationPath(path);
+            Animating = true;
+            HasMoved = true;
         }
 
         public void AnimationEnded()
@@ -171,6 +164,8 @@ namespace GTMEngine.Model.Characters
             Animating = false;
             FlowController.CurrentGameState = GameFlowState.WaitingForPlayerAction;
             Position = Animation.Position;
+
+            FlowController.CurrentGameState = GameFlowState.WaitingForPlayerAction;
         }
 
         public void TurnEnded()
