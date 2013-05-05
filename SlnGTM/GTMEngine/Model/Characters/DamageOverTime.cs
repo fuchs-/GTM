@@ -17,8 +17,8 @@ namespace GTMEngine.Model.Characters
 
         #region Constructors
 
-        public DamageOverTime(int value, DamageType type, int duration)
-            : base(value, type)
+        public DamageOverTime(int value, DamageType type, Entity source, int duration)
+            : base(value, type, source)
         {
             Duration = duration;
             Reset();

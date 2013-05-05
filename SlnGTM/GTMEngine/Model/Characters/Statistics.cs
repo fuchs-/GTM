@@ -18,13 +18,17 @@ namespace GTMEngine.Model.Characters
 
         public int AttackDamage { get; set; }
         public int AttackSpeed { get; set; }
+        public int AttackRange { get; set; }
         public int MovementSpeed { get; set; }
+
+        public int Armor { get; set; }
+        public int MagicResist { get; set; }
 
         #endregion
 
         #region Constructors
 
-        public Statistics(int hp, int hpRegen, int mp, int mpRegen, int atkDmg, int atkSpd, int movSpd)
+        public Statistics(int hp, int hpRegen, int mp, int mpRegen, int atkDmg, int atkSpd, int atkRange, int movSpd, int armor, int magicResist)
         {
             HP = hp;
             HPRegen = hpRegen;
@@ -33,12 +37,16 @@ namespace GTMEngine.Model.Characters
 
             AttackDamage = atkDmg;
             AttackSpeed = atkSpd;
+            AttackRange = atkRange;
             MovementSpeed = movSpd;
+
+            Armor = armor;
+            MagicResist = magicResist;
         }
 
-        public Statistics(Statistics s) : this(s.HP, s.HPRegen, s.MP, s.MPRegen, s.AttackDamage, s.AttackSpeed, s.MovementSpeed) { }
+        public Statistics(Statistics s) : this(s.HP, s.HPRegen, s.MP, s.MPRegen, s.AttackDamage, s.AttackSpeed, s.AttackRange, s.MovementSpeed, s.Armor, s.MagicResist) { }
 
-        public Statistics() : this(0, 0, 0, 0, 0, 0, 0) { }
+        public Statistics() : this(0, 0, 0, 0, 0, 0, 0, 0, 0, 0) { }
 
         #endregion
 

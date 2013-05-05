@@ -9,17 +9,19 @@ namespace GTMEngine.Model.Characters
     {
         #region Properties
 
-        public int Value { get; private set; }
+        public int Value { get; set; }
         public DamageType Type { get; private set; }
+        public Entity Source { get; private set; }
 
         #endregion
 
         #region Constructor
 
-        public Damage(int value, DamageType type)
+        public Damage(int value, DamageType type, Entity source)
         {
             Value = value;
             Type = type;
+            Source = source;
         }
 
         #endregion

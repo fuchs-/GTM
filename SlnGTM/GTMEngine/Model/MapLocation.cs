@@ -56,20 +56,23 @@ namespace GTMEngine.Model
             return "(" + X + ";" + Y + ")";
         }
 
+        public bool Equals(MapLocation l)
+        {
+            return X == l.X && Y == l.Y;
+        }
+
         #endregion
 
         #region Operators
 
         public static bool operator ==(MapLocation l1, MapLocation l2) 
         {
-            if (l1 != null && l2 != null) return (l1.X == l2.X) && (l1.Y == l2.Y);
-            else return false;
+            return (l1.X == l2.X) && (l1.Y == l2.Y);
         }
 
         public static bool operator !=(MapLocation l1, MapLocation l2)
         {
-            if (l1 != null && l2 != null) return (l1.X != l2.X) || (l1.Y != l2.Y);
-            else return true;
+            return (l1.X != l2.X) || (l1.Y != l2.Y);
         }
 
         #endregion

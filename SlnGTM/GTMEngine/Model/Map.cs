@@ -161,16 +161,15 @@ namespace GTMEngine.Model
 
                         destination = GetTileAtPoint(InputController.GetMousePosition());
 
-                        BreadthFirstSearch bfs = new BreadthFirstSearch(TileGraph);
-
-                        int length = bfs.SearchForVerticeFromVertice(source.Vertice, destination.Vertice);
+                        int length = GetDistance(source, destination);
 
                         Console.WriteLine(length);
 
                         if (length > 0 && length <= TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed && !TurnController.CurrentTurn.CurrentHero.HasMoved)
                         {
                             Console.WriteLine("Possible route:");
-                            Path p = bfs.GetPath(source.Vertice, destination.Vertice);
+
+                            Path p = GetPath(source, destination);
 
                             TurnController.CurrentTurn.CurrentHero.Move(p);
                             FlowController.CurrentGameState = GameFlowState.EntityMoving;
@@ -178,7 +177,27 @@ namespace GTMEngine.Model
                         }
                         else
                         {
-                            if (length == -1) Console.WriteLine("Couldnt find route");
+                            if (length == -1)
+                            {
+                                Entity e = GetEntityAtLocation(destination.Location);
+                                if (e != null)
+                                {
+                                    destination.RestoreAdjacencies();
+                                    AddToGraph(destination);
+                                    if (GetDistance(source, destination) <= TurnController.CurrentTurn.CurrentHero.Stats.AttackRange)
+                                    {
+                                        Damage d = TurnController.CurrentTurn.CurrentHero.GetAutoAttackDamage();
+                                        e.DealDamage(d);
+                                    }
+                                    else 
+                                    {
+                                        Console.WriteLine("Not enough attack range");
+                                    }
+
+                                    RemoveFromGraph(destination);
+                                }
+                            }
+
                             if (length > TurnController.CurrentTurn.CurrentHero.Stats.MovementSpeed) Console.WriteLine("Not enough movement speed");
                             if (TurnController.CurrentTurn.CurrentHero.HasMoved) Console.WriteLine("This hero has already moved this turn");
                         }
@@ -238,7 +257,7 @@ namespace GTMEngine.Model
 
             foreach (Entity e in Entities)
             {
-                if (e.Location == location)
+                if (location == e.Location)
                 {
                     ret = e;
                     break;
@@ -302,14 +321,25 @@ namespace GTMEngine.Model
             TileGraph.RemoveVertice(t.Vertice);
         }
 
+        private int GetDistance(Tile source, Tile destination)
+        {
+            BreadthFirstSearch bfs = new BreadthFirstSearch(TileGraph);
+
+            return bfs.SearchForVerticeFromVertice(source.Vertice, destination.Vertice);
+        }
+
+        private Path GetPath(Tile source, Tile destination)
+        {
+            BreadthFirstSearch bfs = new BreadthFirstSearch(TileGraph);
+            return bfs.GetPath(source.Vertice, destination.Vertice);
+        }
+
         public void TurnStarted()
         {
             MapLocation l = TurnController.CurrentTurn.CurrentHero.Location;
             Tile t = GetTileAtLocation(l);
             t.RestoreAdjacencies();
             AddToGraph(t);
-
-            
         }
 
         public void TurnEnded(Hero hero)

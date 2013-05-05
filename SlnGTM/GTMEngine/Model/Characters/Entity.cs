@@ -173,6 +173,27 @@ namespace GTMEngine.Model.Characters
             HasMoved = false;
         }
 
+        public Damage GetAutoAttackDamage()
+        {
+            Damage ret = new Damage(Stats.AttackDamage, DamageType.Physical, this);
+
+            return ret;
+        }
+
+        public void DealDamage(Damage dmg)
+        {
+            if (dmg.Type == DamageType.Physical || dmg.Type == DamageType.Composite)
+            {
+                dmg.Value -= Stats.Armor;
+            }
+            if (dmg.Type == DamageType.Magical || dmg.Type == DamageType.Composite)
+            {
+                dmg.Value -= Stats.MagicResist;
+            }
+
+            HPBar.Energy -= dmg.Value;
+        }
+
         #endregion
     }
 }

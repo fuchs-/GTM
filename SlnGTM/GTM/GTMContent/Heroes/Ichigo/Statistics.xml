@@ -7,6 +7,9 @@
     <MPRegen>1</MPRegen>
     <AttackDamage>5</AttackDamage>
     <AttackSpeed>1</AttackSpeed>
-    <MovementSpeed>2</MovementSpeed>
+    <AttackRange>1</AttackRange>
+    <MovementSpeed>15</MovementSpeed>
+    <Armor>1</Armor>
+    <MagicResist>2</MagicResist>
   </Asset>
 </XnaContent>
