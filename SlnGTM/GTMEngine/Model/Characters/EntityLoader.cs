@@ -57,15 +57,15 @@ namespace GTMEngine.Model.Characters
             IsReady = true;
         }
 
-        public static Hero LoadHero(string heroName, TeamColor color)
+        public static Hero LoadHero(string heroName, TeamColor color, Player player)
         {
             if (!IsReady) return null;
-
+            
             Hero ret = null;
 
             Texture2D charTexture = ContentManager.Load<Texture2D>(@"Heroes\" + heroName + @"\char");
 
-            ret = new Hero(CurrentID++, Map, heroName, charTexture, ContentManager.Load<Statistics>(@"Heroes\" + heroName + @"\Statistics"));
+            ret = new Hero(CurrentID++, Map, heroName, charTexture, ContentManager.Load<Statistics>(@"Heroes\" + heroName + @"\Statistics"), player);
 
             ret.Initialize(EnergyBarBox, HPBar, GetBorderSprite(color));
 

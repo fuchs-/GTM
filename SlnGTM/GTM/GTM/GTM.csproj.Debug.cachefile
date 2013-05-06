@@ -1,7 +1,6 @@
 Content\Images\emptyTile.xnb
 Content\Heroes\Ichigo\char.xnb
 Content\Heroes\Byakuya\char.xnb
-Content\Images\Entities\EnergyBarBox.xnb
 Content\Images\Entities\HPBar.xnb
 Content\Images\Entities\MPBar.xnb
 Content\Images\Entities\BlueBorder.xnb
@@ -11,7 +10,9 @@ Content\Images\HUD\EnergyBarBox.xnb
 Content\Images\HUD\HPBar.xnb
 Content\Images\HUD\MPBar.xnb
 Content\Images\HUD\NextTurnButton.xnb
+Content\Images\Entities\EnergyBarBox.xnb
 Content\Heroes\HeroList.xnb
 Content\Heroes\LevelUpExperiences.xnb
 Content\Heroes\Ichigo\Statistics.xnb
 Content\Heroes\Byakuya\Statistics.xnb
+Content\Fonts\DamageFont.xnb

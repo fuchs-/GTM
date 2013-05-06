@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 using GTMEngine.Model;
+using GTMEngine.Controller.GameFlow;
 
 namespace GTMEngine.UI
 {
@@ -73,7 +74,7 @@ namespace GTMEngine.UI
 
         public void Update(GameTime gameTime)
         {
-            CurrentHUDDisplay.Update(gameTime);
+            if (FlowController.CurrentGameState == GameFlowState.WaitingForPlayerAction) CurrentHUDDisplay.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)

@@ -13,6 +13,7 @@ using BXEL.DataStructures;
 using GTMEngine.Model.Characters;
 using GTMEngine.Controller;
 using GTMEngine.Controller.GameFlow;
+using GTMEngine.UI;
 
 namespace GTMEngine.Model
 {
@@ -180,7 +181,7 @@ namespace GTMEngine.Model
                             if (length == -1)
                             {
                                 Entity e = GetEntityAtLocation(destination.Location);
-                                if (e != null)
+                                if (e != null && TurnController.CurrentTurn.CurrentTeam.Color != e.MyPlayer.CurrentTeam.Color)
                                 {
                                     destination.RestoreAdjacencies();
                                     AddToGraph(destination);
@@ -188,13 +189,18 @@ namespace GTMEngine.Model
                                     {
                                         Damage d = TurnController.CurrentTurn.CurrentHero.GetAutoAttackDamage();
                                         e.DealDamage(d);
+                                        TextController.ShowDamageText(d, GetTileAtLocation(e.Location));
                                     }
-                                    else 
+                                    else
                                     {
                                         Console.WriteLine("Not enough attack range");
                                     }
 
                                     RemoveFromGraph(destination);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Not an enemy");                                    
                                 }
                             }
 

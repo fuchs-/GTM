@@ -121,6 +121,7 @@
     <Compile Include="UI\HUD.cs" />
     <Compile Include="UI\HUDDisplay.cs" />
     <Compile Include="UI\HUDDisplayObject.cs" />
+    <Compile Include="UI\TextController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />

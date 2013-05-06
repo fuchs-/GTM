@@ -54,11 +54,13 @@ namespace GTMEngine.Model.Characters
 
         public bool HasMoved { get; private set; }
 
+        public Player MyPlayer { get; private set; }
+
         #endregion
 
         #region Constructors
 
-        public Entity(int ID, Map map, String name, Texture2D texture, Statistics stats) : base(name, texture, Vector2.Zero, new Size(50, 50))
+        public Entity(int ID, Map map, String name, Texture2D texture, Statistics stats, Player myPlayer) : base(name, texture, Vector2.Zero, new Size(50, 50))
         {
             this.id = ID;
 
@@ -68,6 +70,8 @@ namespace GTMEngine.Model.Characters
 
             Animating = false;
             Animation = new Animation(this, map, texture);
+
+            MyPlayer = myPlayer;
         }
 
         public Entity(int ID, Map map, String name, Texture2D texture) : base(name, texture, Vector2.Zero, new Size(50, 50))
@@ -180,7 +184,7 @@ namespace GTMEngine.Model.Characters
             return ret;
         }
 
-        public void DealDamage(Damage dmg)
+        public virtual void DealDamage(Damage dmg)
         {
             if (dmg.Type == DamageType.Physical || dmg.Type == DamageType.Composite)
             {
@@ -191,7 +195,15 @@ namespace GTMEngine.Model.Characters
                 dmg.Value -= Stats.MagicResist;
             }
 
-            HPBar.Energy -= dmg.Value;
+            DealDamage(dmg.Value);
+        }
+
+        private void DealDamage(int value)
+        {
+            Stats.HP -= value;
+            if (Stats.HP < 0) Stats.HP = 0;
+
+            HPBar.Energy = Stats.HP;
         }
 
         #endregion

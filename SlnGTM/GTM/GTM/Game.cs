@@ -71,6 +71,7 @@ namespace GTM
             flowController = new FlowController();
 
             map.Initialize(RedTeam, BlueTeam, turnController);
+            TextController.Initialize(Content);
 
             if (turnController.CurrentTurn != null) hud.ChangeHUDDisplay(turnController.CurrentTurn.CurrentHero.MyHUDDisplay);
         }
@@ -113,6 +114,7 @@ namespace GTM
             //This block will get complicated soon enough
             map.Update(gameTime);
             hud.Update(gameTime);
+            TextController.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -126,6 +128,7 @@ namespace GTM
 
             map.Draw(spriteBatch, gameTime);
             hud.Draw(spriteBatch);
+            TextController.Draw(spriteBatch);
 
             spriteBatch.End();
 

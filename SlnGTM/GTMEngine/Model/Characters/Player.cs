@@ -23,16 +23,13 @@ namespace GTMEngine.Model.Characters
 
         #region Constructors
 
-        public Player(string name, Hero hero, Team team)
+        public Player(string name, Team team)
         {
             Name = name;
-            CurrentHero = hero;
             CurrentTeam = team;
 
             KD = new KDStatistics();
             EntitiesUnderControl = new List<int>();
-
-            GiveControl(CurrentHero);
         }
 
         #endregion
@@ -57,6 +54,12 @@ namespace GTMEngine.Model.Characters
         public void RemoveControl(Entity e)
         {
             EntitiesUnderControl.Remove(e.id);
+        }
+
+        public void SetCurrentHero(Hero h)
+        {
+            CurrentHero = h;
+            GiveControl(CurrentHero);
         }
 
         #endregion

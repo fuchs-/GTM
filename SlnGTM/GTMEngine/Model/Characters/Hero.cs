@@ -32,7 +32,7 @@ namespace GTMEngine.Model.Characters
 
         #region Constructors
 
-        public Hero(int ID, Map map, string name, Texture2D texture, Statistics baseStats) : base(ID, map, name, texture, baseStats)
+        public Hero(int ID, Map map, string name, Texture2D texture, Statistics baseStats, Player myPlayer) : base(ID, map, name, texture, baseStats, myPlayer)
         {
             LevelUpStats = new Statistics();
             Level = 1;
@@ -82,6 +82,12 @@ namespace GTMEngine.Model.Characters
             ExperienceToNextLevel = Hero.LevelUpExperiences[Level];
 
             //probably some ability level up logic goes here
+        }
+
+        public override void DealDamage(Damage damage)
+        {
+            base.DealDamage(damage);
+            MyHUDDisplay.HPBar.Energy = Stats.HP;
         }
 
         #endregion
