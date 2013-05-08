@@ -24,6 +24,8 @@ namespace GTMEngine.Model.Characters
 
         #region Properties
 
+        private static int AttackActionCost { get { return 10; } }
+
         public MapLocation Location 
         {
             get { return location; }
@@ -55,6 +57,8 @@ namespace GTMEngine.Model.Characters
         public bool HasMoved { get; private set; }
 
         public Player MyPlayer { get; private set; }
+
+        private int AttackActions { get; set; }
 
         #endregion
 
@@ -103,6 +107,8 @@ namespace GTMEngine.Model.Characters
             HPBar = new EnergyBar(InitialStats.HP, barBox, hpBarTexture, barPosition, energyPosition);
 
             Border = border;
+
+            AttackActions = Stats.AttackSpeed;
         }
 
         public override void Update(GameTime gameTime)
@@ -175,13 +181,21 @@ namespace GTMEngine.Model.Characters
         public void TurnEnded()
         {
             HasMoved = false;
+            AttackActions = Stats.AttackSpeed;
         }
 
-        public Damage GetAutoAttackDamage()
+        public Damage Attack(Entity e)
         {
-            Damage ret = new Damage(Stats.AttackDamage, DamageType.Physical, this);
+            if (AttackActions >= AttackActionCost)
+            {
+                AttackActions -= AttackActionCost;
+                Damage damage = new Damage(Stats.AttackDamage, DamageType.Physical, this);
+                e.DealDamage(damage);
+                return damage;
+            }
 
-            return ret;
+            Console.WriteLine("Not enough attack actions this turn");
+            return null;
         }
 
         public virtual void DealDamage(Damage dmg)

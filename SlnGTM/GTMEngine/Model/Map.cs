@@ -185,11 +185,11 @@ namespace GTMEngine.Model
                                 {
                                     destination.RestoreAdjacencies();
                                     AddToGraph(destination);
+
                                     if (GetDistance(source, destination) <= TurnController.CurrentTurn.CurrentHero.Stats.AttackRange)
                                     {
-                                        Damage d = TurnController.CurrentTurn.CurrentHero.GetAutoAttackDamage();
-                                        e.DealDamage(d);
-                                        TextController.ShowDamageText(d, GetTileAtLocation(e.Location));
+                                        Damage d = TurnController.CurrentTurn.CurrentHero.Attack(e);
+                                        if(d != null) TextController.ShowDamageText(d, GetTileAtLocation(e.Location));
                                     }
                                     else
                                     {
