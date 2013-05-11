@@ -16,3 +16,4 @@ Content\Heroes\LevelUpExperiences.xnb
 Content\Heroes\Ichigo\Statistics.xnb
 Content\Heroes\Byakuya\Statistics.xnb
 Content\Fonts\DamageFont.xnb
+Content\Fonts\LevelUpFont.xnb

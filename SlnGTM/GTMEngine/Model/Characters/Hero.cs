@@ -90,6 +90,9 @@ namespace GTMEngine.Model.Characters
             InitialStats += LevelUpStats;
             ExperienceToNextLevel = Hero.LevelUpExperiences[Level];
 
+            Tile t = Map.GetTileAtLocation(Location);
+            TextController.ShowLevelUpText(t);
+
             //probably some ability level up logic goes here
         }
 
@@ -100,7 +103,7 @@ namespace GTMEngine.Model.Characters
 
             if (Stats.HP == 0)
             {
-                this.Die();
+                this.Die(damage.Source);               
             }
         }
 
@@ -112,10 +115,18 @@ namespace GTMEngine.Model.Characters
             }
         }
 
-        private void Die()
+        private void Die(Entity e)
         {
             IsDead = true;
             KDStats.Died();
+            MyPlayer.CurrentTeam.KD.Died();
+
+            Hero h = e.MyPlayer.CurrentHero; //If the source its not the hero itself
+
+            h.KDStats.Killed();
+            h.MyPlayer.CurrentTeam.KD.Killed();
+
+            h.GiveExperience(1);
 
             RemainingDeadTurns = KDStats.Deaths + 1;
         }
