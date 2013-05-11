@@ -26,6 +26,7 @@ namespace GTMEngine.Model.Characters
 
         private static int AttackActionCost { get { return 10; } }
 
+        protected Map Map { get; private set; }
         public MapLocation Location 
         {
             get { return location; }
@@ -43,8 +44,8 @@ namespace GTMEngine.Model.Characters
 
         public Statistics Stats { get; protected set; }
 
-        private EnergyBar HPBar { get; set; }
-        private EnergyBar MPBar { get; set; }
+        protected EnergyBar HPBar { get; set; }
+        protected EnergyBar MPBar { get; set; }
 
         private Sprite Border { get; set; }
 
@@ -68,9 +69,10 @@ namespace GTMEngine.Model.Characters
         {
             this.id = ID;
 
+            Map = map;
             Location = new MapLocation();
             InitialStats = stats;
-            Stats = stats;
+            Stats = new Statistics(stats);
 
             Animating = false;
             Animation = new Animation(this, map, texture);
@@ -218,6 +220,13 @@ namespace GTMEngine.Model.Characters
             if (Stats.HP < 0) Stats.HP = 0;
 
             HPBar.Energy = Stats.HP;
+
+            if (Stats.HP == 0) this.Die();
+        }
+
+        protected void Die()
+        {
+            Map.RemoveFromMap(this);
         }
 
         #endregion

@@ -9,16 +9,18 @@ using Microsoft.Xna.Framework.Content;
 using BXEL.Graphics;
 
 using GTMEngine.UI;
+using GTMEngine.Controller.GameFlow;
 
 namespace GTMEngine.Model.Characters
 {
-    public class Hero : Entity
+    public class Hero : Entity, ITurnChangeListener
     {
         #region Properties
 
         public static Dictionary<int, int> LevelUpExperiences { get; private set; }
 
         private Statistics LevelUpStats { get; set; }
+        public KDStatistics KDStats { get; private set; }
 
         public int Level { get; private set; }
         public int Experience { get; private set; }
@@ -28,6 +30,9 @@ namespace GTMEngine.Model.Characters
 
         public HUDDisplay MyHUDDisplay { get; private set; }
 
+        public bool IsDead { get; private set; }
+        public int RemainingDeadTurns { get; private set; }
+
         #endregion
 
         #region Constructors
@@ -35,6 +40,7 @@ namespace GTMEngine.Model.Characters
         public Hero(int ID, Map map, string name, Texture2D texture, Statistics baseStats, Player myPlayer) : base(ID, map, name, texture, baseStats, myPlayer)
         {
             LevelUpStats = new Statistics();
+            KDStats = new KDStatistics();
             Level = 1;
             Experience = 0;
             ExperienceToNextLevel = Hero.LevelUpExperiences[1];
@@ -47,6 +53,9 @@ namespace GTMEngine.Model.Characters
             MyHUDDisplay.AddObject(hdo);
 
             MyHUDDisplay.InitializeEnergyBars(this.InitialStats.HP, this.InitialStats.MP);
+
+            IsDead = false;
+            RemainingDeadTurns = 0;
         }
 
         #endregion
@@ -87,6 +96,45 @@ namespace GTMEngine.Model.Characters
         public override void DealDamage(Damage damage)
         {
             base.DealDamage(damage);
+            MyHUDDisplay.HPBar.Energy = Stats.HP;
+
+            if (Stats.HP == 0)
+            {
+                this.Die();
+            }
+        }
+
+        public void TurnChanged()
+        {
+            if (IsDead)
+            {
+                if (--RemainingDeadTurns == 0) Revive();
+            }
+        }
+
+        private void Die()
+        {
+            IsDead = true;
+            KDStats.Died();
+
+            RemainingDeadTurns = KDStats.Deaths + 1;
+        }
+
+        private void Revive()
+        {
+            if (!Map.AddToMap(this))
+            {
+                IsDead = true;
+                RemainingDeadTurns = 1;
+
+                return;
+            }
+
+            Console.WriteLine(Name + "Has revived");
+
+            IsDead = false;
+            Stats.HP = InitialStats.HP;
+            HPBar.Energy = Stats.HP;
             MyHUDDisplay.HPBar.Energy = Stats.HP;
         }
 

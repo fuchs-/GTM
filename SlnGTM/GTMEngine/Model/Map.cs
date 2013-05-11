@@ -21,7 +21,9 @@ namespace GTMEngine.Model
     {
         #region Properties
 
-        private int X, Y; // These represent the number of columns and lines on the map respectively
+
+        public static int X { get { return 16; } }   //Columns
+        public static int Y { get { return 9; } }    //Lines
 
         #region Tiles
 
@@ -52,10 +54,6 @@ namespace GTMEngine.Model
 
         public Map()
         {
-            // Setting the size of the map
-            X = 16; //Columns
-            Y = 9;  //Lines
-
             //Setting tile's matrix
             Tiles = new Tile[X, Y];
 
@@ -319,6 +317,7 @@ namespace GTMEngine.Model
 
         private void AddToGraph(Tile t)
         {
+            t.RestoreAdjacencies();
             TileGraph.AddVertice(t.Vertice);
         }
 
@@ -343,8 +342,8 @@ namespace GTMEngine.Model
         public void TurnStarted()
         {
             MapLocation l = TurnController.CurrentTurn.CurrentHero.Location;
+
             Tile t = GetTileAtLocation(l);
-            t.RestoreAdjacencies();
             AddToGraph(t);
         }
 
@@ -352,6 +351,35 @@ namespace GTMEngine.Model
         {
             MapLocation l = TurnController.CurrentTurn.CurrentHero.Location;
             RemoveFromGraph(GetTileAtLocation(l));
+        }
+
+        public bool AddToMap(Hero h)
+        {
+            MapLocation l;
+            Entity e;
+            int count = 0;
+
+            do
+            {
+                l = h.MyPlayer.CurrentTeam.GetSpawningPoint();
+                e = GetEntityAtLocation(l);
+                count++;
+            } while (e != null && count < 30);
+
+            if (e != null) return false;
+
+            this.SetEntityLocation(h, l);
+            Entities.Add(h);
+            RemoveFromGraph(GetTileAtLocation(l));
+
+            return true;
+        }
+
+        public void RemoveFromMap(Entity e)
+        {
+            Entities.Remove(e);
+            Tile t = GetTileAtLocation(e.Location);
+            AddToGraph(t);
         }
 
         #endregion

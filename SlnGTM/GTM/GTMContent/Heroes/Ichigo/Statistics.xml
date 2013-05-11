@@ -5,7 +5,7 @@
     <HPRegen>1</HPRegen>
     <MP>30</MP>
     <MPRegen>1</MPRegen>
-    <AttackDamage>20</AttackDamage>
+    <AttackDamage>100</AttackDamage>
     <AttackSpeed>15</AttackSpeed>
     <AttackRange>15</AttackRange>
     <MovementSpeed>2</MovementSpeed>

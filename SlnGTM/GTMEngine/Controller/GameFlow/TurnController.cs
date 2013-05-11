@@ -20,6 +20,8 @@ namespace GTMEngine.Controller.GameFlow
         private Queue<Player> Turns { get; set; }
         public Player CurrentTurn { get; private set; }
 
+        private List<ITurnChangeListener> TurnChangeListeners { get; set; }
+
         #endregion
 
         #region Constructors
@@ -32,6 +34,8 @@ namespace GTMEngine.Controller.GameFlow
             BlueTeam = blueTeam;
 
             Turns = new Queue<Player>();
+
+            TurnChangeListeners = new List<ITurnChangeListener>();
 
             OrganizeTurnQueue();
 
@@ -57,19 +61,35 @@ namespace GTMEngine.Controller.GameFlow
 
             Turns.Clear();
 
+            Player p;
+
             while (red.Count > 0 && blue.Count > 0)
             {
-                Turns.Enqueue(red.Dequeue());
-                Turns.Enqueue(blue.Dequeue());
+                p = red.Dequeue();
+                Turns.Enqueue(p);
+                TurnChangeListeners.Add(p.CurrentHero);
+
+                p = blue.Dequeue();
+                Turns.Enqueue(p);
+                TurnChangeListeners.Add(p.CurrentHero);
             }
         }
 
         public void NextTurn()
         {
-            Turns.Enqueue(CurrentTurn);
-            Map.TurnEnded(CurrentTurn.CurrentHero);
-            CurrentTurn.CurrentHero.TurnEnded();
-            CurrentTurn = Turns.Dequeue();
+
+            do
+            {
+                foreach (ITurnChangeListener l in TurnChangeListeners) l.TurnChanged();
+
+                Turns.Enqueue(CurrentTurn);
+                Map.TurnEnded(CurrentTurn.CurrentHero);
+                CurrentTurn.CurrentHero.TurnEnded();
+                CurrentTurn = Turns.Dequeue();
+
+            } while (CurrentTurn.CurrentHero.IsDead);
+            
+            
             Map.TurnStarted();
 
             HUD.ChangeHUDDisplay(CurrentTurn.CurrentHero.MyHUDDisplay);

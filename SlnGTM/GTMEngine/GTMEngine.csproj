@@ -96,6 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\GameFlow\ITurnChangeListener.cs" />
     <Compile Include="Controller\InputController.cs" />
     <Compile Include="Model\Characters\Animation.cs" />
     <Compile Include="Model\Characters\Damage.cs" />

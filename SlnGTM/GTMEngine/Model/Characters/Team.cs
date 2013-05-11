@@ -17,6 +17,8 @@ namespace GTMEngine.Model.Characters
 
         public KDStatistics KD { get; private set; }
 
+        private List<MapLocation> SpawningPoints { get; set; }
+
         #endregion
 
         #region Constructors
@@ -27,6 +29,20 @@ namespace GTMEngine.Model.Characters
             Color = color;
 
             KD = new KDStatistics();
+            
+            SpawningPoints = new List<MapLocation>();
+
+            int x = 0;
+
+            if (Color == TeamColor.Blue)
+            {
+                x = Map.X - 1;
+            }
+
+            for (int y = 0; y < Map.Y; y++)
+            {
+                SpawningPoints.Add(new MapLocation(x, y));
+            }
         }
 
         public Team(TeamColor color) : this(color, new List<Player>()) { }
@@ -39,8 +55,7 @@ namespace GTMEngine.Model.Characters
 
         public void AddPlayer(Player player)
         {
-            Players.Add(player);
-            
+            Players.Add(player);   
         }
 
         public List<Hero> GetHeroes()
@@ -65,6 +80,21 @@ namespace GTMEngine.Model.Characters
                 ret.Enqueue(p);
             }
             
+            return ret;
+        }
+
+        public MapLocation GetSpawningPoint()
+        {
+            MapLocation ret;
+            int i;
+
+            Random r = new Random();
+            i = r.Next();
+
+            i = i % SpawningPoints.Count;
+
+            ret = SpawningPoints[i];
+
             return ret;
         }
 
