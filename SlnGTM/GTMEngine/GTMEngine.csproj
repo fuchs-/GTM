@@ -116,6 +116,8 @@
     <Compile Include="Controller\GameFlow\TurnController.cs" />
     <Compile Include="Model\Map.cs" />
     <Compile Include="Model\MapLocation.cs" />
+    <Compile Include="Model\Sound\SoundController.cs" />
+    <Compile Include="Model\Sound\SoundEnumerators.cs" />
     <Compile Include="Model\Tile.cs" />
     <Compile Include="Model\TileVertice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

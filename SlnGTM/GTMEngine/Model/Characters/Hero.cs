@@ -7,9 +7,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
 using BXEL.Graphics;
+using BXEL.Sounds;
 
 using GTMEngine.UI;
 using GTMEngine.Controller.GameFlow;
+using GTMEngine.Model.Sound;
 
 namespace GTMEngine.Model.Characters
 {
@@ -123,12 +125,43 @@ namespace GTMEngine.Model.Characters
 
             Hero h = e.MyPlayer.CurrentHero; //If the source its not the hero itself
 
-            h.KDStats.Killed();
-            h.MyPlayer.CurrentTeam.KD.Killed();
-
-            h.GiveExperience(1);
+            h.KilledHero();
 
             RemainingDeadTurns = KDStats.Deaths + 1;
+        }
+
+        private void KilledHero()
+        {
+            this.KDStats.Killed();
+            this.MyPlayer.CurrentTeam.KilledHero();
+
+            if (KDStats.ConsecutiveKills >= 3) //Killstreak
+            {
+                if (KDStats.ConsecutiveKills >= 10)
+                {
+                    SoundController.PlaySound("HolyShit");
+                }
+                else
+                {
+                    String s = Enum.GetName(typeof(KillStreaks), KDStats.ConsecutiveKills);
+                    SoundController.PlaySound(s);
+                }
+            }
+
+            if (KDStats.MultiKill > 1)
+            {
+                if (KDStats.MultiKill > 3)
+                {
+                    SoundController.PlaySound("Ownage");
+                }
+                else
+                {
+                    string s = Enum.GetName(typeof(MultiKills), KDStats.MultiKill);
+                    SoundController.PlaySound(s);
+                }
+            }
+
+            this.GiveExperience(1);
         }
 
         private void Revive()

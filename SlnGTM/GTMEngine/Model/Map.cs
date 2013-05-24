@@ -349,6 +349,7 @@ namespace GTMEngine.Model
 
         public void TurnEnded(Hero hero)
         {
+            hero.KDStats.PlayerTurnEnding();
             MapLocation l = TurnController.CurrentTurn.CurrentHero.Location;
             RemoveFromGraph(GetTileAtLocation(l));
         }

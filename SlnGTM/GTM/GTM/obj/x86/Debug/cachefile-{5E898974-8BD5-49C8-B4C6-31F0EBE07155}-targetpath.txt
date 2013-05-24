@@ -17,3 +17,6 @@ Content\Heroes\Ichigo\Statistics.xnb
 Content\Heroes\Byakuya\Statistics.xnb
 Content\Fonts\DamageFont.xnb
 Content\Fonts\LevelUpFont.xnb
+Content\Sounds\GTMSounds.xgs
+Content\Sounds\MainSoundBank.xsb
+Content\Sounds\MainWaveBank.xwb

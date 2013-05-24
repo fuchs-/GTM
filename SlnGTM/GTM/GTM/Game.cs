@@ -13,8 +13,8 @@ using BXEL.Graphics;
 
 using GTMEngine.Model;
 using GTMEngine.Model.Characters;
+using GTMEngine.Model.Sound;
 using GTMEngine.Controller.GameFlow;
-
 using GTMEngine.UI;
 
 
@@ -98,6 +98,8 @@ namespace GTM
 
             map.LoadContent(this.Content);
             hud.LoadContent(this.Content);
+
+            SoundController.LoadContent();
         }
 
         protected override void UnloadContent()
@@ -115,6 +117,7 @@ namespace GTM
             map.Update(gameTime);
             hud.Update(gameTime);
             TextController.Update(gameTime);
+            SoundController.Update();
 
             base.Update(gameTime);
         }

@@ -65,3 +65,7 @@ C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Images\
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Fonts\DamageFont.xnb
 C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Fonts\DamageFont.xnb
 C:\Users\Fuchs\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Fonts\LevelUpFont.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Fonts\LevelUpFont.xnb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Sounds\GTMSounds.xgs
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Sounds\MainSoundBank.xsb
+C:\Users\pc\Documents\GitHub\GTM\SlnGTM\GTM\GTM\bin\x86\Debug\Content\Sounds\MainWaveBank.xwb

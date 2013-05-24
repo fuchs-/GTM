@@ -100,6 +100,11 @@ namespace GTMEngine.Model.Characters
 
         #endregion
 
+        public void KilledHero()
+        {
+            KD.Killed();
+        }
+
         #endregion
     }
 }

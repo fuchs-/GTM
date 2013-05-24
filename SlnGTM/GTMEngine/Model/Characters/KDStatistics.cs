@@ -34,7 +34,7 @@ namespace GTMEngine.Model.Characters
 
         public KDStatistics(int multiKillTurnLimit) : this(0, 0, 0, multiKillTurnLimit) { }
 
-        public KDStatistics() : this(3) { }
+        public KDStatistics() : this(1) { }
 
         #endregion
 
@@ -69,6 +69,12 @@ namespace GTMEngine.Model.Characters
         public override string ToString()
         {
             return Kills + "/" + Deaths;
+        }
+
+        public void PlayerTurnEnding()
+        {
+            if (TurnCount == 0) MultiKill = 0;
+            else TurnCount--;
         }
 
         #endregion

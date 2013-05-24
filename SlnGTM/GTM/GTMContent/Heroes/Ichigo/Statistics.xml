@@ -6,8 +6,8 @@
     <MP>30</MP>
     <MPRegen>1</MPRegen>
     <AttackDamage>100</AttackDamage>
-    <AttackSpeed>15</AttackSpeed>
-    <AttackRange>15</AttackRange>
+    <AttackSpeed>30</AttackSpeed>
+    <AttackRange>30</AttackRange>
     <MovementSpeed>2</MovementSpeed>
     <Armor>1</Armor>
     <MagicResist>2</MagicResist>
